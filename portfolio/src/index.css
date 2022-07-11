@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'segoe ui', 'open sans', sans-serif;
+}
+
+.title{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.sub-title{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: #525252;
+  text-decoration-thickness: 4px;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.link{
+  color: #ff63c3;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.underline-link:hover{
+  text-decoration: underline;
+  text-decoration-color: #ff63c3;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+
+}
+
+.underline-gray{
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: #525252;
+  text-decoration-thickness: 4px;
+}
+
+.social-link:hover{
+  background-color: rgba(20, 184, 165, 0.11)
+}
