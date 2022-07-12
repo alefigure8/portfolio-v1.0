@@ -4,18 +4,21 @@ import Work from './page/Work'
 import Posts from './page/Posts'
 import Post from './page/Post'
 import Main from './layout/Main'
+import ProjectProvider from './content/ProjectProvider'
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main />}>
-          <Route index element={<Home />} />
-          <Route path="works" element={<Work />} />
-          <Route path="posts" element={<Posts />} />
-          <Route path="post/:id" element={<Post />} />
-        </Route>
-      </Routes>
+      <ProjectProvider>
+        <Routes>
+          <Route path="/" element={<Main />}>
+            <Route index element={<Home />} />
+            <Route path="works" element={<Work />} />
+            <Route path="posts" element={<Posts />} />
+            <Route path="post/:id" element={<Post />} />
+          </Route>
+        </Routes>
+      </ProjectProvider>
     </BrowserRouter>
   )
 }
