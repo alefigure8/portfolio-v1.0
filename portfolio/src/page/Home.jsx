@@ -2,8 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import ButtonPrimary from '../component/Button'
 import profile from '../img/profile_3.png'
+import useProjects from '../hooks/useProjects'
 
 const Home = () => {
+  const {projects} = useProjects()
+  const POSTS = 2;
+
   return (
     <>
       <div className='bg-zinc-700 block py-3 rounded-lg text-center mb-6 transition-all-1'>
@@ -64,8 +68,20 @@ const Home = () => {
           <button className='social-link underline-link text-teal-200 py-3 px-4 rounded-lg font-semibold'><i className="fa-solid fa-envelope-open mr-2"></i>gomeznieto@proton.com</button>
         </div>
       </div>
-      <div className='mb-6 transition-all-6'>
+      <div className='transition-all-6'>
         <h4 className='sub-title'>Latest post</h4>
+        <div className='flex justify-center mt-6 mb-10'>
+          {projects.map(project => {
+            return (
+              <div className='flex flex-col items-center mr-6' key={project.id}>
+                <img className='w-56 h-32 rounded-lg' src={`${import.meta.env.VITE_URL}${project.img}`}alt="project" />
+                <p className='text-white text-base title-page mt-6'>{project.title}</p>
+                <p className='text-white text-base text-center'>{project.description}</p>
+              </div>
+            )
+          }).slice(0, POSTS)}
+        </div>
+        <ButtonPrimary>Older posts</ButtonPrimary>
       </div>
     </>
   )
