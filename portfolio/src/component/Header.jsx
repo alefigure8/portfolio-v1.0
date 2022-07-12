@@ -10,7 +10,7 @@ const Header = () => {
             <li><Link to='/' className='title-page mr-5'>Alejandro Gomez Nieto</Link></li>
             <li><Link to='works' className='hidden md:flex mr-5 hover:underline underline-offset-4'>Work</Link></li>
             <li><Link to='posts' className='hidden md:flex mr-5 hover:underline underline-offset-4'>Posts</Link></li>
-            <li><Link to='#' className='hidden md:flex mr-5 hover:underline underline-offset-4'>Source</Link></li>
+            <li><a href='https://github.com/alefigure8/portfolio-v1.0/tree/master/portfolio' target="_blank" className='hidden md:flex mr-5'><i className="fa-brands fa-github mr-2 flex items-center"></i><span className='hover:underline underline-offset-4'>Source</span></a></li>
           </ul>
         </div>
         <div className='ml-auto flex-2'>
