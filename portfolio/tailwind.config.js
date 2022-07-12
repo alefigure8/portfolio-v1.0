@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       Mplus: ["M PLUS Rounded 1c", "sans-serif"],
+      sans: ['ui-sans-serif', 'system-ui'],
     },
     extend: {},
   },
