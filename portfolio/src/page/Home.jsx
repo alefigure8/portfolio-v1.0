@@ -80,7 +80,7 @@ const Home = () => {
             )
           }).slice(0, POSTS)}
         </div>
-        <ButtonPrimary>Older posts</ButtonPrimary>
+        <Link to='posts'><ButtonPrimary>Older posts</ButtonPrimary></Link>
       </div>
     </>
   )
