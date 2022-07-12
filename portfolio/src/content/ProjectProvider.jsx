@@ -5,6 +5,7 @@ const ProjectContext = createContext()
 
 const ProjectProvider = ({children}) => {
   const[projects, setProjects] = useState([])
+  const[loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +18,7 @@ const ProjectProvider = ({children}) => {
         },
       })
       setProjects(data.data);
-
+      setLoading(false);
     }
 
     fetchData()
@@ -27,7 +28,8 @@ const ProjectProvider = ({children}) => {
   return (
     <ProjectContext.Provider value={
       {
-        projects
+        projects,
+        loading
       }
     }>
       {children}
