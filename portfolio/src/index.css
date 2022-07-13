@@ -6,6 +6,10 @@
   font-family: 'segoe ui', 'open sans', sans-serif;
 }
 
+html, body, .wrapper {
+  min-height: 100vh;
+}
+
 .title-page{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 700;
@@ -161,6 +165,7 @@
 }
 
 .menu-h{
+  opacity: 1;
   margin: 0.1rem 0.6rem;
   display: flex;
   background-color: #2D3748;
@@ -171,8 +176,25 @@
   border: #555 solid 1px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
   --chakra-sizes-1: 0.25rem;
-  transition: all;
-  transition-duration: 0.5s;
+  transition: all 0.5s;
+}
+
+.menu-h-hidden{
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(50%, -50%) scale(0);
+  margin: 0.1rem 0.6rem;
+  display: flex;
+  background-color: #2D3748;
+  min-width: 220px;
+  min-height: 160px;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  border: #555 solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
+  --chakra-sizes-1: 0.25rem;
+  transition: opacity 0.3s;
+  transition: all 0.5s;
 }
 
 @media screen and (min-width: 768px) {
