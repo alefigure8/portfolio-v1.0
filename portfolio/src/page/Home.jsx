@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import ButtonPrimary from '../component/Button'
-import profile from '../img/profile_3.png'
+import profile from '../img/profile_4.png'
 import useProjects from '../hooks/useProjects'
 
 const Home = () => {

@@ -29,10 +29,16 @@
   color: #fff;
 }
 
+.background-nav{
+  background-color: #88ccca;
+  padding: 0.4rem;
+  color: #525252;
+  font-weight: 400;
+}
 
 .sub-title{
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #fff;
   text-decoration: underline;
@@ -80,7 +86,7 @@
 }
 
 .main-w{
-  min-width: 500px;
+  min-width: 450;
   max-width: 500px;
 }
 
@@ -132,3 +138,45 @@
     opacity: 1;
   }
 }
+
+.transition-all-out{
+  animation-name: just-get-out;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+  opacity: 0;
+  animation-fill-mode: forwards
+}
+
+@keyframes just-get-out{
+  from{
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+  to{
+    position: relative;
+    top: 20px;
+    opacity: 0;
+  }
+}
+
+.menu-h{
+  margin: 0.1rem 0.6rem;
+  display: flex;
+  background-color: #2D3748;
+  min-width: 220px;
+  min-height: 160px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: #555 solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
+  --chakra-sizes-1: 0.25rem;
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-h{
+    display: none;
+  }
+ }
