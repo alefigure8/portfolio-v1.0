@@ -5,6 +5,7 @@ import Posts from './page/Posts'
 import Post from './page/Post'
 import Main from './layout/Main'
 import ProjectProvider from './content/ProjectProvider'
+import NotFound from './page/NotFound'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ProjectProvider>
         <Routes>
           <Route path="/" element={<Main />}>
+            <Route path="*" element={<NotFound />} />
             <Route index element={<Home />} />
             <Route path="works" element={<Work />} />
             <Route path="posts" element={<Posts />} />
