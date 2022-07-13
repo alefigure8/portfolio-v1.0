@@ -11,9 +11,9 @@ const Header = () => {
 
   return (
     <div className='flex flex-col fixed lg:w-2/5 text-white left-0 right-0 m-auto z-10'>
-      <nav className= 'bg-zinc-800 bg-opacity-50 backdrop-blur-md py-3 px-2'>
+      <nav className= 'bg-zinc-800 bg-opacity-50 backdrop-blur-md py-3 px-3'>
         <div className='flex whitespace-nowrap'>
-          <div className='flex sm:w-3/5 md:w-4/5 justify-between'>
+          <div className='flex sm:w-3/5 md:w-full justify-between'>
             <ul className='flex md:justify-center items-center w-3/5'>
               <li><Link to='/' className='title-page mr-5'>Alejandro Gomez Nieto</Link></li>
               <li><Link to='works' className={`hidden md:flex mr-5 hover:underline underline-offset-4 ${pathname === '/works' && 'background-nav transition-all duration-500'}`}>Works</Link></li>
@@ -31,8 +31,8 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <div className={`${isOpen ? 'visible flex justify-end' : 'hidden'}`}>
-        <div className='menu-h'>
+      <div className='flex justify-end'>
+        <div className={`${isOpen ? 'menu-h' : 'menu-h-hidden'}`}>
           <ul className='flex flex-col gap-3'>
             <li><Link to='/' className='hover:underline underline-offset-4' onClick={handleToggle}>About</Link></li>
             <li><Link to='works' className='hover:underline underline-offset-4' onClick={handleToggle}>Works</Link></li>
