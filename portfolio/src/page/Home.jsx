@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='bg-zinc-700 block py-3 rounded-lg text-center mb-6 transition-all-1'>
+      <div className='bg-zinc-700 bg-opacity-50 backdrop-blur-md py-3 rounded-lg text-center mb-6 transition-all-1'>
         <p className='text-white'>Hola, gracias por visitar mi portfolio!</p>
       </div>
       <div className='md:flex  transition-all-1'>
