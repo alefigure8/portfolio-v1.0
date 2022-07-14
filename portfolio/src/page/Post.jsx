@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import getProject from '../config/getProject'
+import '../prism.js'
 
 const Post = () => {
   const {id} = useParams();

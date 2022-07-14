@@ -26,7 +26,7 @@ const Header = () => {
             <i className="fa-regular fa-sun"></i>
             </div>
             <div onClick={handleToggle} className='md:hidden ml-2 px-3 py-2 bg-neutral-900 border border-neutral-400 rounded-md text-neutral-400 cursor-pointer hover:bg-neutral-700 transition-all'>
-              <i class="fa-solid fa-bars"></i>
+              <i className="fa-solid fa-bars"></i>
             </div>
           </div>
         </div>

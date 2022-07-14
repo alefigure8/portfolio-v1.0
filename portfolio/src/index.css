@@ -6,9 +6,6 @@
   font-family: 'segoe ui', 'open sans', sans-serif;
 }
 
-html, body, .wrapper {
-  min-height: 100vh;
-}
 
 .title-page{
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -202,3 +199,4 @@ html, body, .wrapper {
     display: none;
   }
  }
+
