@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {getProyect} from '../config/getProject';
+import Spinner from '../component/Spinner';
 
 const Posts = () => {
   const [projects, setProjects] = useState([]);
@@ -15,7 +16,8 @@ const Posts = () => {
   } , [])
 
   if(loading){
-    return <div>Loading...</div>
+    return <Spinner />
+
   }
 
   return (

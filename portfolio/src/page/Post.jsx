@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import getBlogs from '../config/getBlogs'
+import Spinner from '../component/Spinner';
 import '../prism.js'
 
 const Post = () => {
@@ -26,7 +27,7 @@ const Post = () => {
   console.log(project);
 
   if(loading){
-    return <div>Loading...</div>
+    return <Spinner />
   }
 
   const field = project.field;

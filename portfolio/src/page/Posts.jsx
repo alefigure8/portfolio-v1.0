@@ -1,11 +1,12 @@
 import {Link} from 'react-router-dom';
+import Spinner from '../component/Spinner';
 import useProjects from '../hooks/useProjects'
 
 const Posts = () => {
   const {projects, loading} = useProjects();
 
   if(loading){
-    return <div>Loading...</div>
+    return <Spinner />
   }
 
   return (
