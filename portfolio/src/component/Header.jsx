@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div className='flex flex-col fixed lg:w-2/5 text-white left-0 right-0 m-auto z-10'>
-      <nav className= 'bg-zinc-800 bg-opacity-50 backdrop-blur-md py-3 px-3'>
+      <nav className= 'bg-zinc-800 backdrop-blur-md bg-opacity-50 py-3 px-3'>
         <div className='flex whitespace-nowrap'>
           <div className='flex sm:w-3/5 md:w-full justify-between'>
             <ul className='flex md:justify-center items-center w-3/5'>
@@ -25,7 +25,7 @@ const Header = () => {
             <div className='bg-orange-300 px-3 py-2 text-black rounded-md hover:bg-orange-400 cursor-pointer transition-all'>
             <i className="fa-regular fa-sun"></i>
             </div>
-            <div onClick={handleToggle} className='md:hidden ml-2 px-3 py-2 bg-neutral-900 border border-neutral-400 rounded-md text-neutral-400 cursor-pointer hover:bg-neutral-700 transition-all'>
+            <div onClick={handleToggle} className='md:hidden ml-2 px-3 py-2 bg-neutral-900 bg-opacity-50  border border-neutral-400 rounded-md text-neutral-400 cursor-pointer hover:bg-neutral-700 transition-all'>
               <i className="fa-solid fa-bars"></i>
             </div>
           </div>
