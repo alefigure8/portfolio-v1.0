@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom';
-import getProject from '../config/getProject'
+import getBlogs from '../config/getBlogs'
 import '../prism.js'
 
 const Post = () => {
@@ -12,16 +12,18 @@ const Post = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const project = await getProject(id);
-        setProject(project.data[0]);
+        const project = await getBlogs(id);
+        setProject(project);
         setLoading(false);
-        setDate(project.data[0].created_at);
+        setDate(project.created_at);
       } catch (error) {
         console.log(error);
       }
       }
       fetchData();
   }, [])
+
+  console.log(project);
 
   if(loading){
     return <div>Loading...</div>
@@ -36,9 +38,6 @@ const Post = () => {
         dangerouslySetInnerHTML={{ __html: field }}
       >
       </div>
-
-
-
     </div>
   )
 }
