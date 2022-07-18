@@ -24,7 +24,6 @@ const Post = () => {
       fetchData();
   }, [])
 
-  console.log(project);
 
   if(loading){
     return <Spinner />

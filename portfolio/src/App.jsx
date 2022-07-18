@@ -6,23 +6,26 @@ import Posts from './page/Posts'
 import Post from './page/Post'
 import Main from './layout/Main'
 import ProjectProvider from './content/ProjectProvider'
+import ModeProvider from './content/ModeProvider'
 import NotFound from './page/NotFound'
 
 function App() {
   return (
     <BrowserRouter>
-      <ProjectProvider>
-        <Routes>
-          <Route path="/" element={<Main />}>
-            <Route path="*" element={<NotFound />} />
-            <Route index element={<Home />} />
-            <Route path="works" element={<Works />} />
-            <Route path="work/:id" element={<Work />} />
-            <Route path="posts" element={<Posts />} />
-            <Route path="post/:id" element={<Post />} />
-          </Route>
-        </Routes>
-      </ProjectProvider>
+      <ModeProvider>
+        <ProjectProvider>
+          <Routes>
+            <Route path="/" element={<Main />}>
+              <Route path="*" element={<NotFound />} />
+              <Route index element={<Home />} />
+              <Route path="works" element={<Works />} />
+              <Route path="work/:id" element={<Work />} />
+              <Route path="posts" element={<Posts />} />
+              <Route path="post/:id" element={<Post />} />
+            </Route>
+          </Routes>
+        </ProjectProvider>
+      </ModeProvider>
     </BrowserRouter>
   )
 }

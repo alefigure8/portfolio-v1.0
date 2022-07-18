@@ -2,18 +2,22 @@ import {Outlet} from 'react-router-dom'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
 import Banner from '../component/banner'
+import useMode from '../hooks/useMode'
 
 const Main = () => {
+  const {mode} = useMode()
   return (
     <>
       <Header/>
-      <main className='container mx-auto p-8 md:p-5 md:flex md:justify-center'>
-        <div className="main-w">
-          <Banner/>
-          <Outlet/>
-        </div>
-      </main>
-      <Footer/>
+      <div className={`transition-all min-h-screen ${mode ? 'bg-zinc-800' : 'body-light'}`}>
+        <main className='container mx-auto p-8 md:p-5 md:flex md:justify-center'>
+          <div className="main-w">
+            <Banner/>
+            <Outlet/>
+          </div>
+        </main>
+        <Footer/>
+      </div>
     </>
   )
 }

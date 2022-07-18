@@ -6,6 +6,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.body-light{
+  background-color: #F0E7DB;
+}
+
 
 .title-page{
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -24,11 +28,16 @@
 
 }
 
+.title-light,
 .title{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
+}
+
+.title-light{
+  color: #222;
 }
 
 .background-nav{
@@ -38,6 +47,7 @@
   font-weight: 400;
 }
 
+.sub-title-light,
 .sub-title{
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 1.2rem;
@@ -49,6 +59,10 @@
   text-decoration-thickness: 4px;
   margin-top: 0.75rem;
   margin-bottom: 1rem;
+}
+
+.sub-title-light{
+  color: #222;
 }
 
 .title-post{
@@ -73,12 +87,16 @@
   text-underline-offset: 6px;
 }
 
+.underline-link-light:hover,
 .underline-link:hover{
   text-decoration: underline;
   text-decoration-color: #ff63c3;
   text-underline-offset: 2px;
   text-decoration-thickness: 2px;
+}
 
+.underline-link-light:hover{
+  text-decoration-color: #2C7B7A;
 }
 
 .underline-gray{
@@ -171,15 +189,23 @@
   opacity: 1;
   margin: 0.1rem 0.6rem;
   display: flex;
-  background-color: #2D3748;
   min-width: 220px;
   min-height: 160px;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: #555 solid 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
   --chakra-sizes-1: 0.25rem;
   transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
+}
+
+.menu-h-dark{
+  background-color: #2D3748;
+  border: #555 solid 1px;
+}
+
+.menu-h-light{
+  background-color: #FFFEFE;
+  border: #ddd solid 1px;
 }
 
 .menu-h-hidden{
@@ -188,13 +214,10 @@
   transform: translate(50%, -50%) scale(0);
   margin: 0.1rem 0.6rem;
   display: flex;
-  background-color: #2D3748;
   min-width: 220px;
   min-height: 160px;
   padding: 1rem;
   border-radius: 0.3rem;
-  border: #555 solid 1px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,rgba(0, 0, 0, 0.2) 0px 5px 10px,rgba(0, 0, 0, 0.4) 0px 15px 40px;
   --chakra-sizes-1: 0.25rem;
   transition: opacity 0.3s;
   transition: all 0.5s;
@@ -205,6 +228,29 @@
     display: none;
   }
  }
+
+ .transition-mode{
+  animation-name: mode-on;
+  animation-duration: .3s;
+  animation-iteration-count: initial;
+  opacity: 0;
+  animation-fill-mode: forwards
+}
+
+@keyframes mode-on{
+  from{
+    position: relative;
+    color: transparent;
+    bottom: 40px;
+    transform: blur(5px);
+    opacity: 0;
+  }
+  to{
+    position: relative;
+    bottom: 0px;
+    opacity: 1;
+  }
+}
 
 /* spinner */
 
