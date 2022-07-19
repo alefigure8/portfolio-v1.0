@@ -2,17 +2,18 @@ import { createContext, useState, useEffect } from "react"
 
 const ModeContext = createContext()
 
-const localMode = () => {
-  const mode =  localStorage.getItem("mode")
-  return mode
-}
 
 const ModeProvider = ({children}) => {
-  const [mode, setMode] = useState(localMode() || true)
+  const localMode =  JSON.parse(localStorage.getItem("mode"))
+  const [mode, setMode] = useState(localMode == null ? true : localMode)
 
   useEffect( () => {
-    const getMode = async () => {
-      const localMode = await localStorage.getItem("mode")
+    const getMode = () => {
+      const localMode = JSON.parse(localStorage.getItem("mode"))
+      if (localMode == null) {
+        localStorage.setItem("mode", JSON.stringify(true))
+        setMode(true)
+      }
       return setMode(localMode)
     }
     getMode()

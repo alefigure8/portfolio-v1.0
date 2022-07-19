@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   const handleMode = async () => {
-    await localStorage.setItem("mode", !mode)
+    await localStorage.setItem("mode", JSON.stringify(!mode))
     setMode(!mode)
   }
 

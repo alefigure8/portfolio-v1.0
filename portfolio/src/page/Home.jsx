@@ -10,6 +10,7 @@ const Home = () => {
   const POSTS = 2;
   const {mode} = useMode()
 
+
   return (
     <>
       <div className={` bg-opacity-50 backdrop-blur-md py-3 rounded-lg text-center mb-6 transition-all-1 ${mode ? 'bg-zinc-700' : 'bg-white'}`}>
