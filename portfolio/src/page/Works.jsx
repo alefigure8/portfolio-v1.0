@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {getProyect} from '../config/getProject';
 import Spinner from '../component/Spinner';
+import useMode from '../hooks/useMode'
 
 const Posts = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const {mode} = useMode()
+
   useEffect (() => {
     const fetchData = async () => {
       const data = await getProyect();
@@ -22,15 +25,15 @@ const Posts = () => {
 
   return (
     <div className='mt-6'>
-      <h3 className='title-pages text-white mb-5'>Works</h3>
+      <h3 className={`title-pages mb-5 ${mode ? 'text-white ' : 'text-zinc-800'}`}>Works</h3>
       <div className='grid md:grid-cols-2'>
       {projects.map(project => {
             return (
               <Link to={`/work/${project.id}`} key={project.id}>
                 <div className='flex flex-col items-center mr-6 mt-4 md:mt-8 transition-all-1 cursor-pointer'>
                   <img className='w-full md:w-56 Md:h-32 rounded-xl hover:-translate-y-1 transition-all duration-150' src={`${import.meta.env.VITE_URL}${project.img}`}alt="project" />
-                  <p className='text-white title-page mt-3'>{project.title}</p>
-                  <p className='text-white parraph md:text-lg mt-1'>{project.description}</p>
+                  <p className={`title-page mt-3 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.title}</p>
+                  <p className={`parraph md:text-lg mt-1 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>
                 </div>
               </Link>
             )

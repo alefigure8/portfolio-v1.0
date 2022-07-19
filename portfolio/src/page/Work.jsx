@@ -3,11 +3,13 @@ import {Link, useParams} from 'react-router-dom';
 import {getProyectById} from '../config/getProject';
 import Spinner from '../component/Spinner';
 import '../prism.js'
+import useMode from '../hooks/useMode'
 
 const Post = () => {
   const {id} = useParams();
   const [project, setProject] = useState({});
   const [loading, setLoading] = useState(true);
+  const {mode} = useMode()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,9 +33,9 @@ const Post = () => {
   const field = project.description;
   return (
     <div className='mt-6 transition-all-1'>
-      <h3 className='title-page text-white mb-5'><Link to='/works'><span className='title-post'>Works</span></Link><span className='text-sm mr-2 ml-2 font-light'>{`>`}</span>{project.title}</h3>
+      <h3 className={`title-page  mb-5 ${mode ? 'text-white' : 'text-zinc-800'}`}><Link to='/works'><span className='title-post'>Works</span></Link><span className='text-sm mr-2 ml-2 font-light'>{`>`}</span>{project.title}</h3>
       <div
-        className='text-white'
+        className={mode ? 'text-white' : 'text-zinc-800'}
         dangerouslySetInnerHTML={{ __html: field }}
       >
       </div>

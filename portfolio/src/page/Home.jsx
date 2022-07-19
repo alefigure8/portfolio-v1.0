@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-      <div className={` bg-opacity-50 backdrop-blur-md py-3 rounded-lg text-center mb-6 transition-all-1 ${mode ? 'bg-zinc-700' : 'bg-white'}`}>
+      <div className={`bg-opacity-50 backdrop-blur-md py-3 rounded-lg text-center mb-6 transition-all-1 ${mode ? 'bg-zinc-700' : 'bg-white'}`}>
         <p className={`transition-all ${mode ? 'text-white' : 'text-zinc-800'}`}>Hola, gracias por visitar mi portfolio!</p>
       </div>
       <div className='md:flex  transition-all-1'>
@@ -28,7 +28,7 @@ const Home = () => {
       <div className=' transition-all-2'>
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>Work</h4>
         <p className={`text-justify parraph ${mode ? 'text-white' : 'text-zinc-800'}`}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet atque laudantium nulla. Corporis ex, eligendi, eaque consequatur non doloremque exercitationem quo nesciunt dolorum quaerat incidunt accusamus saepe pariatur aliquid asperiores vitae illo labore natus minus alias in eum assumenda? Alias.
+          Soy un desarrolador backend viviendo en Argentina, apasionado por desarrollar aplicaciones que me exijan continuar aprendiendo. Trabajo con Nodejs, Express, MySQL, MongoDB y Firebase, utilizando en muchos de los proyectos Jaison Web Token, passport, Auth0, como también GraphQL. En el frontend trabajo con React, NextJS, Styled Components, Material UI, Chakra, Bootstrap, Tailwind, etc. <br /> Actualmente estoy realizando la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional. <br /> Publico contentido sobre lo que voy aprendiendo en mi <Link to='posts' className='link'>Blog</Link>
         </p>
         <Link to='works'><ButtonPrimary>My Portfolio</ButtonPrimary></Link>
       </div>
@@ -36,39 +36,46 @@ const Home = () => {
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>Bio</h4>
         <div className='flex'>
           <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>1984</p>
-          <p className={`text-justify parraph ml-4 ${mode ? 'text-white' : 'text-zinc-800'}`}>Nací en Buenos Aires, Argentina.</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Nací­ en Buenos Aires, Argentina.</p>
+        </div>
+        <div className='flex'>
+          <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>2001</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Comencé a desarrollar sitios webs, realizando la primera versión del portal de noticias Obrapública.com</p>
+        </div>
+        <div className='flex'>
+          <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>2008</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Me recibí de la carrera de Producción Audiovisual en el Centro de Investigación Cinematográfico.</p>
         </div>
         <div className='flex'>
           <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>2011</p>
-          <p className={`text-justify parraph ml-4 ${mode ? 'text-white' : 'text-zinc-800'}`}>Trabajo desarrollando pagina s web junto al Legislador Rafael Gentili</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Trabajé desarrollando páginas web junto al Legislador Rafael Gentili.</p>
         </div>
         <div className='flex'>
           <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>2014</p>
-          <p className={`text-justify parraph ml-4 ${mode ? 'text-white' : 'text-zinc-800'}`}>Tengo un negocio propio por cerca de 8 años</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Tuve un negocio propio por casi 8 años.</p>
         </div>
         <div className='flex'>
           <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>2019</p>
-          <p className={`text-justify parraph ml-4 ${mode ? 'text-white' : 'text-zinc-800'}`}>Realizo cursos en Udemy y Freecode Camp</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Retomé la programación, realizando cursos en Udemy y Freecode Camp.</p>
         </div>
         <div className='flex'>
           <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>2022</p>
-          <p className={`text-justify parraph ml-4 ${mode ? 'text-white' : 'text-zinc-800'}`}>Me encuentro cursando el primer año de la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional (UTN) con un promedio de 9.5</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Hoy me encuentro cursando el primer año de la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional (UTN), con un promedio de 9.6</p>
         </div>
       </div>
       <div className='mb-6 transition-all-4'>
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>I <i className="fa-solid fa-heart text-base underline-gray"></i></h4>
         <p className={`text-justify parraph ${mode ? 'text-white' : 'text-zinc-800'}`}>
-         Lorem ipsum, dolor sit amet consectetur <span className ='link'>photography</span> elit. Fuga, aliquam!
-        </p>
+         Escuchar Ramones, Elliott Smith y All Them Witches; leer libros de Foster Wallace, Salinger y Philip K. Dick; el cine de Paul Thomas Anderson y Stanley Kubrick; sacar <a href="https://www.flickr.com/photos/stupiditytries/" target="_blank"><span className ='link'>fotografías</span></a> en recitales y aprender todo lo que me llame un poco la atención.</p>
       </div>
       <div className='mb-6 transition-all-5'>
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>On the web</h4>
         <div className='flex flex-col items-start'>
-        <a href="http://github.com/alefigure8" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light underline-link-light'}`}><i className="fa-brands fa-github mr-2"></i>@alefigure8</button></a>
-          <a href="http://github.com/alefigure8" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-twitter mr-2"></i>@ale_figure8</button></a>
-          <button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-instagram mr-2"></i>@ale_figure8</button>
-          <button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-medium mr-2"></i>@ale_figure8</button>
-          <button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-solid fa-envelope-open mr-2"></i>gomeznieto@proton.com</button>
+          <a href="http://github.com/alefigure8" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light underline-link-light'}`}><i className="fa-brands fa-github mr-2"></i>@alefigure8</button></a>
+          <a href="https://twitter.com/alegomeznieto" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-twitter mr-2"></i>@alegomeznieto</button></a>
+          <a href="https://www.instagram.com/alegomeznieto/" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-instagram mr-2"></i>@alegomeznieto</button></a>
+          <a href="https://medium.com/@alegomeznieto" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-medium mr-2"></i>@alegomeznieto</button></a>
+          <a href="mailto:gomeznieto@pm.me"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-solid fa-envelope-open mr-2"></i>gomeznieto@pm.me</button></a>
         </div>
       </div>
       <div className='transition-all-6'>

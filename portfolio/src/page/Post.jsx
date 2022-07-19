@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import getBlogs from '../config/getBlogs'
 import Spinner from '../component/Spinner';
+import useMode from '../hooks/useMode'
 import '../prism.js'
 
 const Post = () => {
@@ -9,6 +10,7 @@ const Post = () => {
   const [project, setProject] = useState({});
   const [loading, setLoading] = useState(true);
   const [date, setDate] = useState('');
+  const {mode} = useMode()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,9 +34,9 @@ const Post = () => {
   const field = project.field;
   return (
     <div className='mt-6 transition-all-1'>
-      <h3 className='title-page text-white mb-5'><Link to='/posts'><span className='title-post'>Posts</span></Link><span className='text-sm mr-2 ml-2 font-light'>{`>`}</span>{project.title}<span className='ml-5 text-xs font-semibold bg-gray-600 px-1'>{date.slice(0, 10)}</span></h3>
+      <h3 className={`title-page  mb-5 ${mode ? 'text-white' : 'text-zinc-800'}`}><Link to='/posts'><span className='title-post'>Posts</span></Link><span className='text-sm mr-2 ml-2 font-light'>{`>`}</span>{project.title}<span className={`ml-5 text-xs font-semibold px-1 bg-gray-600 text-white`}>{date.slice(0, 10)}</span></h3>
       <div
-        className='text-white'
+        className={mode ? 'text-white' : 'text-zinc-800'}
         dangerouslySetInnerHTML={{ __html: field }}
       >
       </div>
