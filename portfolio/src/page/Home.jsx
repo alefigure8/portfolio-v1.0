@@ -71,17 +71,17 @@ const Home = () => {
       <div className='mb-6 transition-all-5'>
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>On the web</h4>
         <div className='flex flex-col items-start'>
-          <a href="http://github.com/alefigure8" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light underline-link-light'}`}><i className="fa-brands fa-github mr-2"></i>@alefigure8</button></a>
-          <a href="https://twitter.com/alegomeznieto" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-twitter mr-2"></i>@alegomeznieto</button></a>
-          <a href="https://www.instagram.com/alegomeznieto/" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-instagram mr-2"></i>@alegomeznieto</button></a>
-          <a href="https://medium.com/@alegomeznieto" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-medium mr-2"></i>@alegomeznieto</button></a>
-          <a href="mailto:gomeznieto@pm.me"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-solid fa-envelope-open mr-2"></i>gomeznieto@pm.me</button></a>
+          <a href="http://github.com/alefigure8" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph-social ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light underline-link-light'}`}><i className="fa-brands fa-github mr-2"></i>@alefigure8</button></a>
+          <a href="https://twitter.com/alegomeznieto" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph-social ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-twitter mr-2"></i>@alegomeznieto</button></a>
+          <a href="https://www.instagram.com/alegomeznieto/" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph-social ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-instagram mr-2"></i>@alegomeznieto</button></a>
+          <a href="https://medium.com/@alegomeznieto" target="_blank"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph-social ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-brands fa-medium mr-2"></i>@alegomeznieto</button></a>
+          <a href="mailto:gomeznieto@pm.me"><button className={`social-link py-3 px-4 rounded-lg font-semibold parraph-social ${mode ? 'text-teal-200  underline-link ' : 'text-teal-700 underline-link-light'}`}><i className="fa-solid fa-envelope-open mr-2"></i>gomeznieto@pm.me</button></a>
         </div>
       </div>
       <div className='transition-all-6'>
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>Latest post</h4>
         <div className='flex justify-center mt-6 mb-10'>
-          {loading ? <Spinner /> : projects.map(project => {
+          {loading ? <Spinner /> : (projects.length > 0 ? projects.map(project => {
             return (
               <Link to={`post/${project.id}`} key={project.id}><div className='flex flex-col items-center mr-6'>
                 <img className='w-56 h-32 rounded-lg' src={`${import.meta.env.VITE_URL}${project.img}`}alt="project" />
@@ -89,7 +89,8 @@ const Home = () => {
                 <p className={`text-base text-center parraph ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>
               </div></Link>
             )
-          }).slice(0, POSTS)}
+          }).slice(0, POSTS) : <p className={`text-center parraph ${mode ? 'text-zinc-400' : 'text-zinc-800'}`}>No hay proyectos para mostrar</p>)
+          }
         </div>
         <Link to='posts'><ButtonPrimary>Older posts</ButtonPrimary></Link>
       </div>

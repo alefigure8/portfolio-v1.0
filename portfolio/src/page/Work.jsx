@@ -39,7 +39,8 @@ const Post = () => {
         dangerouslySetInnerHTML={{ __html: field }}
       >
       </div>
-      <a href={project.link} className='link'>Github</a>
+      <br />
+      <a href={project.link} className='link' target='_blank'>Github</a>
     </div>
   )
 }

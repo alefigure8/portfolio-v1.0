@@ -19,9 +19,9 @@ const Header = () => {
   return (
     <div className={`z-40 flex flex-col fixed w-full ${mode ? 'text-white' : 'text-zinc-800' }`}>
       <nav className= {`py-2 px-3 ${mode ? 'mainNavDark' : 'mainNavlight'}`}>
-        <div className='flex whitespace-nowrap md:w-2/5 left-0 right-0 m-auto '>
-          <div className='flex sm:w-3/5 md:2/5 justify-between'>
-            <ul className='flex md:justify-center items-center'>
+        <div className='flex whitespace-nowrap md:w-3/5 lg:w-2/5 left-0 right-0 m-auto '>
+          <div className='flex justify-between'>
+            <ul className='flex lg:justify-center items-center'>
               <li><Link to='/' className='title-page mr-5'>Alejandro Gomez Nieto</Link></li>
               <li><Link to='works' className={`hidden md:flex mr-5 link-page hover:underline underline-offset-4 ${pathname === '/works' && 'background-nav transition-all duration-500'}`}>Works</Link></li>
               <li><Link to='posts' className={`hidden md:flex mr-5 link-page hover:underline underline-offset-4 ${pathname === '/posts' && 'background-nav transition-all duration-500'}`}>Posts</Link></li>
