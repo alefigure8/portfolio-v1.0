@@ -1,7 +1,7 @@
 import {Outlet} from 'react-router-dom'
 import Header from '../component/Header'
 import Footer from '../component/Footer'
-import Banner from '../component/banner'
+import Banner from '../component/Banner'
 import useMode from '../hooks/useMode'
 
 const Main = () => {
