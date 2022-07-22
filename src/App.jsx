@@ -11,7 +11,7 @@ import NotFound from './page/NotFound'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter forceRefresh={true}>
       <ModeProvider>
         <ProjectProvider>
           <Routes>
