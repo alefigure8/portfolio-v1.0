@@ -80,10 +80,10 @@ const Home = () => {
       </div>
       <div className='transition-all-6'>
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>Latest post</h4>
-        <div className='flex justify-center mt-6 mb-10'>
+        <div className='flex justify-center flex-col md:flex-row mt-6 mb-10'>
           {loading ? <Spinner /> : (projects.length > 0 ? projects.map(project => {
             return (
-              <Link to={`post/${project.id}`} key={project.id}><div className='flex flex-col items-center mr-6'>
+              <Link to={`post/${project.id}`} key={project.id}><div className='flex flex-col items-center mr-6 mb-10 md:mb-4'>
                 <img className='w-56 h-32 rounded-lg' src={`${import.meta.env.VITE_URL}${project.img}`}alt="project" />
                 <p className={`parraph font-semibold title-page mt-6 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.title}</p>
                 <p className={`text-base text-center parraph ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>

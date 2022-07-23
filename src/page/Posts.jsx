@@ -15,7 +15,7 @@ const Posts = () => {
     <div className='mt-6'>
       <h3 className={`title-pages mb-5 ${mode ? 'text-white ' : 'text-zinc-800'}`}>Posts</h3>
       <div className='grid md:grid-cols-2'>
-      {projects.length > 0 ? (projects.map(project => {
+      {projects?.length > 0 ? (projects.map(project => {
             return (
               <Link to={`/post/${project.id}`} key={project.id}>
                 <div className='flex flex-col items-center mr-6 mt-4 md:mt-8 transition-all-1 cursor-pointer'>

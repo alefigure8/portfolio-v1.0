@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {getProyectById} from '../config/getProject';
 import Spinner from '../component/Spinner';
-import '../prism.js'
 import useMode from '../hooks/useMode'
+import Prism from 'prismjs';
+import '../prism.css';
 
 const Post = () => {
   const {id} = useParams();
@@ -24,10 +25,13 @@ const Post = () => {
       fetchData();
   }, [])
 
-  console.log(project);
-
   if(loading){
     return <Spinner />
+  }
+
+  const $code = !loading && document.querySelector('.language-javascript')?.firstChild
+  if($code){
+    Prism.highlightAll();
   }
 
   const field = project.description;

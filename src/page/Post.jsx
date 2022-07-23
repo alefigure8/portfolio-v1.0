@@ -3,7 +3,8 @@ import {Link, useParams} from 'react-router-dom';
 import getBlogs from '../config/getBlogs'
 import Spinner from '../component/Spinner';
 import useMode from '../hooks/useMode'
-import '../prism.js'
+import Prism from 'prismjs';
+import '../prism.css';
 
 const Post = () => {
   const {id} = useParams();
@@ -24,11 +25,16 @@ const Post = () => {
       }
       }
       fetchData();
-  }, [])
 
+  }, [])
 
   if(loading){
     return <Spinner />
+  }
+
+  const $code = !loading && document.querySelector('.language-javascript')?.firstChild
+  if($code){
+    Prism.highlightAll();
   }
 
   const field = project.field;
