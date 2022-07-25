@@ -28,7 +28,7 @@ const Home = () => {
       <div className=' transition-all-2'>
         <h4 className={mode ? 'sub-title' : 'sub-title-light'}>Work</h4>
         <p className={`text-justify parraph ${mode ? 'text-white' : 'text-zinc-800'}`}>
-          Soy un desarrolador backend viviendo en Argentina, apasionado por desarrollar aplicaciones que me exijan continuar aprendiendo. Trabajo con Nodejs, Express, MySQL, MongoDB y Firebase, utilizando en muchos de los proyectos Jaison Web Token, passport, Auth0, como también GraphQL. En el frontend trabajo con React, NextJS, Styled Components, Material UI, Chakra, Bootstrap, Tailwind, etc. <br /> Actualmente estoy realizando la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional. <br /> Publico contentido sobre lo que voy aprendiendo en mi <Link to='posts' className='link'>Blog</Link>
+          Soy un desarrolador backend viviendo en Argentina, apasionado por desarrollar aplicaciones que me exijan continuar aprendiendo. Trabajo con Nodejs, Express, MySQL, MongoDB y Firebase, utilizando en muchos de los proyectos Jaison Web Token, passport, Auth0, como también GraphQL. En el frontend trabajo con React, NextJS, Styled Components, Material UI, Chakra, Bootstrap, Tailwind, etc. <br /> Actualmente estoy realizando la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional. <br /> Publico contentenido sobre lo que voy aprendiendo en mi <Link to='posts' className='link'>Blog</Link>
         </p>
         <Link to='works'><ButtonPrimary>My Portfolio</ButtonPrimary></Link>
       </div>
@@ -89,7 +89,7 @@ const Home = () => {
                 <p className={`text-base text-center parraph ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>
               </div></Link>
             )
-          }).slice(0, POSTS) : <p className={`text-center parraph ${mode ? 'text-zinc-400' : 'text-zinc-800'}`}>No hay proyectos para mostrar</p>)
+          }).reverse().slice(0, POSTS) : <p className={`text-center parraph ${mode ? 'text-zinc-400' : 'text-zinc-800'}`}>No hay proyectos para mostrar</p>)
           }
         </div>
         <Link to='posts'><ButtonPrimary>Older posts</ButtonPrimary></Link>
