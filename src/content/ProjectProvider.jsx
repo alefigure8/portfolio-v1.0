@@ -6,6 +6,8 @@ const ProjectContext = createContext()
 const ProjectProvider = ({children}) => {
   const[projects, setProjects] = useState([])
   const[loading, setLoading] = useState(true)
+  const [pages, setPages] = useState(0)
+  const ENTRIES = 6
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +20,7 @@ const ProjectProvider = ({children}) => {
         },
       })
       setProjects(data.data);
+      setPages(Math.round((((data.data.length / ENTRIES) * 10) / 10)))
       setLoading(false);
     }
 
@@ -29,7 +32,8 @@ const ProjectProvider = ({children}) => {
     <ProjectContext.Provider value={
       {
         projects,
-        loading
+        loading,
+        pages
       }
     }>
       {children}
