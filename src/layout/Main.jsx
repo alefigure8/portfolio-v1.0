@@ -3,6 +3,7 @@ import Header from '../component/Header'
 import Footer from '../component/Footer'
 import Banner from '../component/Banner'
 import useMode from '../hooks/useMode'
+import ModelViewer from '../threeJS/ModelViewer'
 
 const Main = () => {
   const {mode} = useMode()
