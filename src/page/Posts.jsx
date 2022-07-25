@@ -19,7 +19,7 @@ const Posts = () => {
             return (
               <Link to={`/post/${project.id}`} key={project.id}>
                 <div className='flex flex-col items-center mr-6 mt-4 md:mt-8 transition-all-1 cursor-pointer'>
-                  <img className='w-full md:w-56 Md:h-32 rounded-xl hover:-translate-y-1 transition-all duration-150' src={`${import.meta.env.VITE_URL}${project.img}`}alt="project" />
+                  <img className='w-full md:w-56 Md:h-32 rounded-xl hover:-translate-y-1 transition-all duration-150' src={project.img} alt="project" />
                   <p className={`title-page mt-3 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.title}</p>
                   <p className={`parraph md:text-lg mt-1 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>
                 </div>

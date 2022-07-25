@@ -84,7 +84,7 @@ const Home = () => {
           {loading ? <Spinner /> : (projects.length > 0 ? projects.map(project => {
             return (
               <Link to={`post/${project.id}`} key={project.id}><div className='flex flex-col items-center mr-6 mb-10 md:mb-4'>
-                <img className='w-56 h-32 rounded-lg' src={`${import.meta.env.VITE_URL}${project.img}`}alt="project" />
+                <img className='w-56 h-32 rounded-lg' src={project.img} alt="project" />
                 <p className={`parraph font-semibold title-page mt-6 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.title}</p>
                 <p className={`text-base text-center parraph ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>
               </div></Link>
