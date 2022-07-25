@@ -4,8 +4,8 @@ const ModeContext = createContext()
 
 
 const ModeProvider = ({children}) => {
-  const localMode =  JSON.parse(localStorage.getItem("mode"))
-  const [mode, setMode] = useState(localMode == null ? true : localMode)
+  const localMode =  JSON.parse(localStorage.getItem("mode")) || true
+  const [mode, setMode] = useState(localMode)
 
   useEffect( () => {
     const getMode = () => {
