@@ -149,6 +149,16 @@
   max-width: 500px;
 }
 
+
+@media screen and (min-width: 960px) { 
+  .img-cover{
+    max-width: 200px;
+    max-height: 120px;
+    object-fit: fill;
+  }
+}
+
+
 .transition-all-1,
 .transition-all-2,
 .transition-all-3,
