@@ -13,7 +13,7 @@ const Main = () => {
       <div className={`transition-all min-h-screen ${mode ? 'body-dark' : 'body-light'}`}>
         <main className='container mx-auto p-8 md:p-5 md:flex md:justify-center'>
           <div className="main-w">
-            <Banner/>
+            <ModelViewer/>
             <Outlet/>
           </div>
         </main>
