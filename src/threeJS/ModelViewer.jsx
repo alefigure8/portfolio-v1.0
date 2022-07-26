@@ -83,7 +83,7 @@ const ModelViewer = () => {
       controls.autoRotate = true;
       controls.target = target;
 
-      loadGLTFModel(scene, "src/img/3D/notebook.glb", {
+      loadGLTFModel(scene, "../img/3D/notebook.glb", {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
