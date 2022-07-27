@@ -158,6 +158,15 @@
   }
 }
 
+.hero-img {
+  position: relative;
+  top: 50px;
+}
+
+.h-500{
+  height: 500px;
+}
+
 
 .transition-all-1,
 .transition-all-2,
