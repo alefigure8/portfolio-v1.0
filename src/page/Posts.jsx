@@ -18,15 +18,15 @@ const Posts = () => {
   return (
     <>
       <div className='mt-6'>
-        <h3 className={`title-pages mb-5 ${mode ? 'text-white ' : 'text-zinc-800'}`}>Posts</h3>
+        <h3 className={`title-pages ml-6 ${mode ? 'text-white' : 'text-zinc-800'}`}>Works</h3>
         <div className='grid md:grid-cols-2'>
         {projects?.length > 0 ? (projects.map(project => {
               return (
                 <Link to={`/post/${project.id}`} key={project.id}>
-                  <div className='flex flex-col items-center mr-6 mt-4 md:mt-8 transition-all-1 cursor-pointer'>
-                    <img className='w-full md:w-56 Md:h-32 rounded-xl hover:-translate-y-1 transition-all duration-150' src={project.img} alt="project" />
+                  <div className='flex flex-col items-center mt-2 mb-6 md:mt-2 transition-all-1 cursor-pointer'>
+                    <img className='w-full md:w-56 Md:h-32 img-cover rounded-xl duration-150' src={project.img} alt="project" />
                     <p className={`title-page mt-3 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.title}</p>
-                    <p className={`parraph md:text-lg mt-1 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>
+                    <p className={`parraph md:text-md mt-1 ${mode ? 'text-white' : 'text-zinc-800'}`}>{project.description}</p>
                   </div>
                 </Link>
               )
