@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback  } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -13,7 +13,7 @@ function loadGLTFModel(scene, glbPath, options) {
       (gltf) => {
         const obj = gltf.scene;
         obj.name = "noteoobk";
-        obj.position.y = -2;
+        obj.position.y = 1;
         obj.position.x = 0;
         obj.receiveShadow = receiveShadow;
         obj.castShadow = castShadow;
@@ -46,6 +46,16 @@ const ModelViewer = () => {
   const [loading, setLoading] = useState(true);
   const [renderer, setRenderer] = useState();
 
+  const handleWindowResize = useCallback(() => {
+    const { current: container } = refContainer
+    if (container && renderer) {
+      const scW = container.clientWidth
+      const scH = container.clientHeight
+
+      renderer.setSize(scW, scH)
+    }
+  }, [renderer])
+
   useEffect(() => {
     const { current: container } = refContainer;
     if (container && !renderer) {
@@ -62,7 +72,7 @@ const ModelViewer = () => {
       setRenderer(renderer);
 
       const scene = new THREE.Scene();
-      const scale = 6;
+      const scale = 8;
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
@@ -77,13 +87,13 @@ const ModelViewer = () => {
         10,
         20 * Math.cos(0.2 * Math.PI)
       );
-      const ambientLight = new THREE.AmbientLight(0x404040, 7);
+      const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
       scene.add(ambientLight);
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
       controls.target = target;
 
-      loadGLTFModel(scene, "../src/img/3D/notebook.glb", {
+      loadGLTFModel(scene, ".//notebook.glb", {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
@@ -101,7 +111,7 @@ const ModelViewer = () => {
           const p = initialCameraPosition;
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
 
-          camera.position.y = 10;
+          camera.position.y = 12;
           camera.position.x =
             p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
           camera.position.z =
@@ -114,23 +124,32 @@ const ModelViewer = () => {
         renderer.render(scene, camera);
       };
 
-      return () => {
+      return async () => {
         cancelAnimationFrame(req);
-        renderer.dispose();
+        await renderer.dispose();
       };
     }
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize, false)
+    return () => {
+      window.removeEventListener('resize', handleWindowResize, false)
+    }
+  }, [renderer, handleWindowResize])
+
   return (
-    <div
-      style={{ height: "450px", width: "500px", position: "relative" }}
-      ref={refContainer}
-    >
-      {loading && (
-        <span style={{ position: "absolute", left: "50%", top: "50%" }}>
-          <Spinner />
-        </span>
-      )}
+    <div className = 'hero-img'>
+      <div
+        style={{ height: "450px", width: "500px", position: "relative" }}
+        ref={refContainer}
+      >
+        {loading && (
+          <span style={{ position: "absolute", left: "50%", top: "50%" }}>
+            <Spinner />
+          </span>
+        )}
+      </div>
     </div>
   );
 };
