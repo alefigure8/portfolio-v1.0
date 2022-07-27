@@ -93,7 +93,7 @@ const ModelViewer = () => {
       controls.autoRotate = true;
       controls.target = target;
 
-      loadGLTFModel(scene, ".//notebook.glb", {
+      loadGLTFModel(scene, "./Notebook.glb", {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
@@ -141,11 +141,11 @@ const ModelViewer = () => {
   return (
     <div className = 'hero-img'>
       <div
-        style={{ height: "450px", width: "500px", position: "relative" }}
+        className="model-img"
         ref={refContainer}
       >
         {loading && (
-          <span style={{ position: "absolute", left: "50%", top: "50%" }}>
+          <span style={{width: "400px", position: "relative"}}>
             <Spinner />
           </span>
         )}

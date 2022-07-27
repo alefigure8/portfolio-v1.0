@@ -163,6 +163,21 @@
   top: 40px;
 }
 
+.model-img {
+  position: relative;
+  width: 420px;
+  height: 380px;
+  margin:0;
+}
+
+@media screen and (min-width: 960px) {
+  .model-img {
+    width: 500px;
+    height: 450px;
+  }
+ }
+
+
 .h-500{
   height: 400px;
 }
