@@ -3,9 +3,9 @@ import ModelViewer from '../threeJS/ModelViewer'
 
 const Banner = () => {
   return (
-    <hero className='h-500'>
+    <div className='h-500'>
       <ModelViewer />
-    </hero>
+    </div>
   )
 }
 
