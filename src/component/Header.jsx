@@ -24,7 +24,7 @@ const Header = () => {
             <ul className='flex lg:justify-center items-center'>
               <Link to='/' >
                 <div className='flex'>
-                  <img src={mode ? './icon-title.svg' : './icon-title-ligth.svg'} className='mr-1' alt="icono de codigo de porgramacion"/>
+                  <img src={mode ? '/icon-title.svg' : '/icon-title-ligth.svg'} className='mr-1' alt="icono de codigo de porgramacion"/>
                   <li className='title-page mr-5'> Alejandro Gomez Nieto</li>
                 </div>
               </Link>
