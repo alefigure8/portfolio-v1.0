@@ -18,6 +18,7 @@ const Post = () => {
       try {
         const project = await getBlogs(id);
         setProject(project);
+        document.title = `Ale Gomez Nieto 👨‍💻 | ${project.title}`;
         setLoading(false);
         setDate(project.created_at);
       } catch (error) {

@@ -17,6 +17,7 @@ const Post = () => {
       try {
         const project = await getProyectById(id);
         setProject(project);
+        document.title = `Ale Gomez Nieto 👨‍💻 | ${project.title}`;
         setLoading(false);
       } catch (error) {
         console.log(error);
