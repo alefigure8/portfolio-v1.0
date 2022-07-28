@@ -33,10 +33,10 @@ const Post = () => {
     return <Spinner />
   }
 
-  const $code = !loading && document.querySelector('.language-javascript')?.firstChild
-  if($code){
+  useEffect(() => {
     Prism.highlightAll();
   }
+  , [project])
 
   const field = project.field;
   return (

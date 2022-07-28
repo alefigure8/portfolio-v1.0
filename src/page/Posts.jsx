@@ -18,7 +18,7 @@ const Posts = () => {
   return (
     <>
       <div className='mt-6'>
-        <h3 className={`title-pages ml-2 ${mode ? 'text-white' : 'text-zinc-800'}`}>Works</h3>
+        <h3 className={`title-pages ml-2 ${mode ? 'text-white' : 'text-zinc-800'}`}>Posts</h3>
         <div className='grid md:grid-cols-2 md:gap-6'>
         {projects?.length > 0 ? (projects.map(project => {
               return (
