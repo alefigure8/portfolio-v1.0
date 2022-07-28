@@ -21,22 +21,19 @@ const Post = () => {
         document.title = `Ale Gomez Nieto 👨‍💻 | ${project.title}`;
         setLoading(false);
         setDate(project.created_at);
+        setTimeout(() => {
+          Prism.highlightAll();
+        } , 1000);
       } catch (error) {
         console.log(error);
       }
       }
       fetchData();
-
   }, [])
 
   if(loading){
     return <Spinner />
   }
-
-  useEffect(() => {
-    Prism.highlightAll();
-  }
-  , [project])
 
   const field = project.field;
   return (
