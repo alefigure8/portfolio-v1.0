@@ -60,7 +60,7 @@ const Home = () => {
         </div>
         <div className='flex'>
           <p className={`font-bold ${mode ? 'text-white' : 'text-zinc-800'}`}>2022</p>
-          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Hoy me encuentro cursando el primer año de la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional (UTN), con un promedio de 9.6</p>
+          <p className={`text-justify parraph-bio ${mode ? 'text-white' : 'text-zinc-800'}`}>Hoy me encuentro cursando el segundo año de la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional (UTN), con un promedio de 9.6</p>
         </div>
       </section>
       <section className='mb-6 transition-all-4 mt-4'>
