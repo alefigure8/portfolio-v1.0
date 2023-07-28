@@ -22,7 +22,7 @@ const ButtonPages = ({pages, setEntries, entries}) => {
       {actualPage != 1 && <button className={`rounded-lg py-2 px-4 font-medium hover:bg-teal-500 cursor-pointer transition-all ${mode ? 'text-zinc-800 bg-teal-300 ' : 'text-white bg-teal-700 '}`} onClick = {handlePrev}>Anterior</button>}
       {actualPage != pages && <button className = {`rounded-lg py-2 px-4 font-medium hover:bg-teal-500 cursor-pointer transition-all ${mode ? 'text-zinc-800 bg-teal-300 ' : 'text-white bg-teal-700 '}`} onClick = {handleNext}>Siguientes</button>}
       </div>
-    </div>
+    </div> 
   )
 }
 

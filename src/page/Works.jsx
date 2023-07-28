@@ -17,7 +17,7 @@ const Posts = () => {
     const fetchData = async () => {
       const data = await getProyect();
       setProjects(data);
-      setPages(Math.round(((data.length / ENTRIES) * 10) / 10))
+      setPages(Math.ceil(data.length / ENTRIES))
       setEntries([0, ENTRIES])
       setLoading(false);
     }

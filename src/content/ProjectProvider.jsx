@@ -20,7 +20,7 @@ const ProjectProvider = ({children}) => {
         },
       })
       setProjects(data.data);
-      setPages(Math.round((((data.data.length / ENTRIES) * 10) / 10)))
+      setPages(Math.ceil(data.data.length / ENTRIES))
       setLoading(false);
     }
 
