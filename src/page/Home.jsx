@@ -22,7 +22,7 @@ const Home = () => {
           <h2 className={`parraph -ml-4 -mt-1 ${mode ? 'text-white' : 'text-zinc-800'}`}>Junior Backend Developer</h2>
         </div>
         <div className='flex justify-center min-w-fit md:ml-10 mt-4 md:mt-0'>
-          <img className='rounded-full w-28 h-28 md:w-24 md:h-24 border-2 saturate-150' src={profile} alt="foto de perfil" />
+          <img className='rounded-full w-28 h-28 md:w-24 md:h-24 border-2' src={profile} alt="foto de perfil" />
         </div>
       </section>
       <section className=' transition-all-2 -mt-1'>
