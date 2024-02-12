@@ -11,8 +11,8 @@ const Header = () => {
     setIsOpen(!isOpen)
   }
 
+  // Cambiar el modo de la pagina
   const handleMode = async () => {
-    await localStorage.setItem("mode", JSON.stringify(!mode))
     setMode(!mode)
   }
 
@@ -31,7 +31,7 @@ const Header = () => {
               <li><Link to='works' className={`hidden md:flex mr-5 link-page hover:underline underline-offset-4 ${pathname === '/works' && 'background-nav transition-all duration-500'}`}>Works</Link></li>
               <li><Link to='posts' className={`hidden md:flex mr-5 link-page hover:underline underline-offset-4 ${pathname === '/posts' && 'background-nav transition-all duration-500'}`}>Posts</Link></li>
               <li><a href='https://github.com/alefigure8/portfolio-v1.0' target="_blank" className='hidden link-page md:flex mr-5'><i className="fa-brands fa-github mr-2 flex items-center" alt="Icono de Github"></i><span className='hover:underline underline-offset-4'>Source</span></a></li>
-              <li><a href='https://drive.google.com/file/d/17R2zicLHXASZjrzCY2XzCLm8qX9MPnWg/view?usp=sharing' target="_blank" className='hidden link-page md:flex mr-5'><i className="fa-shar fa-solid fa-file-arrow-down mr-2 flex items-center" alt="Icono de Descarga"></i><span className='hover:underline underline-offset-4'>CV</span></a></li>
+              <li><a href='https://drive.google.com/file/d/1BPGp62kGggijis29yi460mqrwRafeZ1W/view?usp=sharing' target="_blank" className='hidden link-page md:flex mr-5'><i className="fa-shar fa-solid fa-file-arrow-down mr-2 flex items-center" alt="Icono de Descarga"></i><span className='hover:underline underline-offset-4'>CV</span></a></li>
             </ul>
           </div>
           <div className='ml-auto flex'>

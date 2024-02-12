@@ -1,35 +1,43 @@
-import { createContext, useState, useEffect } from "react"
+import { createContext, useState, useEffect } from "react";
 
-const ModeContext = createContext()
+const ModeContext = createContext();
 
+const ModeProvider = ({ children }) => {
+  const localMode =
+    JSON.parse(localStorage.getItem("mode")) == null
+      ? true
+      : JSON.parse(localStorage.getItem("mode"));
+  const [mode, setMode] = useState(localMode);
 
-const ModeProvider = ({children}) => {
-  const localMode =  JSON.parse(localStorage.getItem("mode")) || true
-  const [mode, setMode] = useState(localMode)
-
-  useEffect( () => {
+  useEffect(() => {
     const getMode = () => {
-      const localMode = JSON.parse(localStorage.getItem("mode"))
-      if (localMode == null) {
-        localStorage.setItem("mode", JSON.stringify(true))
-        setMode(true)
+      if (localStorage.getItem("mode") === null) {
+        localStorage.setItem("mode", JSON.stringify(mode));
       }
-      return setMode(localMode)
-    }
-    getMode()
-    }
-  , [])
+
+      setMode(mode);
+    };
+
+    getMode();
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("mode", JSON.stringify(mode));
+  }
+  , [mode]);
 
   return (
     <ModeContext.Provider
       value={{
         mode,
-        setMode
+        setMode,
       }}
-    >{children}</ModeContext.Provider>
-  )
-}
+    >
+      {children}
+    </ModeContext.Provider>
+  );
+};
 
-export {ModeContext}
+export { ModeContext };
 
-export default ModeProvider
+export default ModeProvider;

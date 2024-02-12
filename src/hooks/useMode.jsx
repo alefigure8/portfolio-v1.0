@@ -1,8 +1,8 @@
 import { ModeContext } from '../content/ModeProvider'
 import { useContext } from 'react'
 
-const useProjects = () => {
+const useMode = () => {
     return useContext(ModeContext)
 }
 
-export default useProjects
+export default useMode

@@ -121,6 +121,10 @@
   text-underline-offset: 6px;
 }
 
+.color-link{
+  color: #ff63c3;
+}
+
 .underline-link-light:hover,
 .underline-link:hover{
   text-decoration: underline;
