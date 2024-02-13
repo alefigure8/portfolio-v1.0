@@ -1,10 +1,16 @@
-import {useState} from 'react'
+import useBlog from '../hooks/useBlog';
 import useMode from '../hooks/useMode'
+import useProjects from '../hooks/useProjects'
 
-const ButtonPages = ({pages, setEntries, entries}) => {
+const ButtonPages = ({content}) => {
   const {mode} = useMode()
-  const [actualPage, setActualPage] = useState(1)
-  const ENTRIES = 6;
+
+  const pages = content === 'post' ? useBlog().pages : useProjects().pages;
+  const ENTRIES = content === 'post' ? useBlog().ENTRIES : useProjects().ENTRIES;
+  const actualPage = content === 'post' ? useBlog().actualPage : useProjects().actualPage;
+  const setActualPage = content === 'post' ? useBlog().setActualPage : useProjects().setActualPage;
+  const setEntries = content === 'post' ? useBlog().setEntries : useProjects().setEntries;
+  const entries = content === 'post' ? useBlog().entries : useProjects().entries;
 
   const handleNext = () => {
     setActualPage(actualPage + 1)
@@ -24,6 +30,7 @@ const ButtonPages = ({pages, setEntries, entries}) => {
       </div>
     </div> 
   )
+
 }
 
-export default ButtonPages
+export default ButtonPages;

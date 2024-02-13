@@ -1,50 +1,74 @@
-import { useEffect, useState } from 'react';
-import {Link, useParams} from 'react-router-dom';
-import Spinner from '../component/Spinner';
-import useMode from '../hooks/useMode'
-import Prism from 'prismjs';
-import '../prism.css';
-import useProjects from '../hooks/useProjects';
-import { setTitle } from '../config/setTitle';
+import "../prism.css";
+import { setTitle } from "../config/setTitle";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import Demo from "../component/Demo";
+import Gallery from "../component/Gallery";
+import Github from "../component/Github";
+import Prism from "prismjs";
+import Spinner from "../component/Spinner";
+import useMode from "../hooks/useMode";
+import useProjects from "../hooks/useProjects";
 
 const Post = () => {
-  const {id} = useParams();
+  const { id } = useParams();
   const [loading, setLoading] = useState(true);
-  const {mode} = useMode()
-  const{project, setId} = useProjects();
-  
-  useEffect( () => {
+  const { mode } = useMode();
+  const { project, setId } = useProjects();
+
+  useEffect(() => {
     setId(id);
-    
-    if(project){
+
+    if (project) {
       setTitle(project?.title);
       setLoading(false);
     }
-    
-  }, [id, project])
+  }, [id, project]);
 
-  if(loading){
-    return <Spinner />
+  if (loading) {
+    return <Spinner />;
   }
 
-  const $code = !loading && document.querySelector('.language-javascript')?.firstChild
-  if($code){
+  const $code =
+    !loading && document.querySelector(".language-javascript")?.firstChild;
+  if ($code) {
     Prism.highlightAll();
   }
 
   const field = project?.description;
-  return (
-    <div className='mt-6 transition-all-1'>
-      <h3 className={`title-page  mb-5 ${mode ? 'text-white' : 'text-zinc-800'}`}><Link to='/works'><span className='title-post'>Works</span></Link><span className='text-sm mr-2 ml-2 font-light'>{`>`}</span>{project?.title}</h3>
-      <div
-        className={mode ? 'text-white' : 'text-zinc-800'}
-        dangerouslySetInnerHTML={{ __html: field }}
-      >
-      </div>
-      <br />
-      <a href={project?.link} target='_blank'><i className="fa-brands fa-github mr-2 color-link" alt="Icono de Github"></i><span className='link'>Repositorio en Github</span></a>
-    </div>
-  )
-}
 
-export default Post
+  return (
+    <div className="mt-6 transition-all-1">
+      <h3
+        className={`title-page  mb-5 ${mode ? "text-white" : "text-zinc-800"}`}
+      >
+        <Link to="/works">
+          <span className="title-post">Works</span>
+        </Link>
+        <span className="text-sm mr-2 ml-2 font-light">{`>`}</span>
+        {project?.title}
+      </h3>
+      <div
+        className={mode ? "text-white" : "text-zinc-800"}
+        dangerouslySetInnerHTML={{ __html: field }}
+      ></div>
+      <br />
+
+      {/* Gallery */}
+      <section>
+        <h3 className={`font-bold ${mode ? "text-white" : "text-zinc-800"}`}>Capturas</h3>
+        <Gallery images={project?.images} />
+      </section>
+
+      {/* Links */}
+      <section 
+        className={`flex justify-center mt-10 gap-x-4`}
+      >
+        <Github href={project?.github} />
+        {project?.demo && <Demo href={project?.demo} />}
+      </section>
+    </div>
+  );
+};
+
+export default Post;

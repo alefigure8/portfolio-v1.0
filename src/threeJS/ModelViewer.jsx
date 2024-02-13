@@ -92,6 +92,7 @@ const ModelViewer = () => {
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
       controls.target = target;
+      controls.enableZoom = false;
 
       loadGLTFModel(scene, "/notebook1.glb", {
         receiveShadow: false,

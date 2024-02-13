@@ -159,6 +159,10 @@
   object-fit: fill;
 }
 
+.subtitle{
+  color: #81E7D8;
+}
+
 
 @media screen and (min-width: 960px) { 
   .img-cover{
@@ -308,7 +312,7 @@
 }
 
 .menu-h-dark{
-  background-color: #2D3748;
+  background-color: #303034;
   border: #555 solid 1px;
 }
 
@@ -391,3 +395,12 @@
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
 }
+
+/* Sizes */
+
+.imageZoomed {
+  width: 50rem;
+}
+
+
+

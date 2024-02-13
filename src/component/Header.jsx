@@ -1,11 +1,13 @@
 import {useState, useEffect} from 'react'
 import {Link, useLocation} from 'react-router-dom'
 import useMode from '../hooks/useMode'
+import useProfile from '../hooks/useProfile'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const {pathname} = useLocation()
   const {mode, setMode} = useMode()
+  const {profile} = useProfile()
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
@@ -31,7 +33,7 @@ const Header = () => {
               <li><Link to='works' className={`hidden md:flex mr-5 link-page hover:underline underline-offset-4 ${pathname === '/works' && 'background-nav transition-all duration-500'}`}>Works</Link></li>
               <li><Link to='posts' className={`hidden md:flex mr-5 link-page hover:underline underline-offset-4 ${pathname === '/posts' && 'background-nav transition-all duration-500'}`}>Posts</Link></li>
               <li><a href='https://github.com/alefigure8/portfolio-v1.0' target="_blank" className='hidden link-page md:flex mr-5'><i className="fa-brands fa-github mr-2 flex items-center" alt="Icono de Github"></i><span className='hover:underline underline-offset-4'>Source</span></a></li>
-              <li><a href='https://drive.google.com/file/d/1BPGp62kGggijis29yi460mqrwRafeZ1W/view?usp=sharing' target="_blank" className='hidden link-page md:flex mr-5'><i className="fa-shar fa-solid fa-file-arrow-down mr-2 flex items-center" alt="Icono de Descarga"></i><span className='hover:underline underline-offset-4'>CV</span></a></li>
+              <li><a href={profile?.cv} target="_blank" className='hidden link-page md:flex mr-5'><i className="fa-solid fa-file-pdf mr-2 flex items-center" alt="Icono de Descarga"></i><span className='hover:underline underline-offset-4'>Bajar CV</span></a></li>
             </ul>
           </div>
           <div className='ml-auto flex'>
@@ -47,13 +49,13 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <div className='flex justify-end'>
+      <div className={`flex justify-end ${!isOpen && 'hidden'}`}>
         <div className={`${isOpen ? 'menu-h' : 'menu-h-hidden'} ${mode ? 'menu-h-dark' : 'menu-h-light'}`}>
           <ul className='flex flex-col gap-3'>
-            <li><Link to='/' className='hover:underline underline-offset-4' onClick={handleToggle}>About</Link></li>
-            <li><Link to='works' className='hover:underline underline-offset-4' onClick={handleToggle}>Works</Link></li>
-            <li><Link to='posts' className='hover:underline underline-offset-4'onClick={handleToggle}>Posts</Link></li>
-            <li><a href='https://github.com/alefigure8/portfolio-v1.0/tree/master/portfolio' target="_blank" className=''><span className='hover:underline underline-offset-4' onClick={handleToggle}>Source</span></a></li>
+            <li><Link to='/' className={`hover:underline underline-offset-4 ${pathname === '/' && 'background-nav transition-all duration-500'}`} onClick={handleToggle}>Sobre mí</Link></li>
+            <li><Link to='works' className={`hover:underline underline-offset-4 ${pathname === '/works' && 'background-nav transition-all duration-500'}`} onClick={handleToggle}>Works</Link></li>
+            <li><Link to='posts' className={`hover:underline underline-offset-4 ${pathname === '/posts' && 'background-nav transition-all duration-500'}`} onClick={handleToggle}>Posts</Link></li>
+            <li><a href={profile?.cv} target="_blank" className={`hover:underline underline-offset-4`} onClick={handleToggle}><i className="fa-solid fa-file-pdf mr-2" alt="Icono de Descarga"></i><span className='hover:underline underline-offset-4'>Bajar CV</span></a></li>
           </ul>
         </div>
       </div>

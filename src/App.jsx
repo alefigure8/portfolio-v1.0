@@ -12,6 +12,7 @@ import ProfileProvider from "./content/profileProvider";
 import NotFound from "./page/NotFound";
 
 function App() {
+
   return (
     <BrowserRouter forceRefresh={true}>
       <ModeProvider>

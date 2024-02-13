@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react"
 import { getBlogs } from "../config/getBlogs"
+import { calcularResultado } from "../helper/CalculateEntries";
 
 const BlogContext = createContext()
 
@@ -10,6 +11,12 @@ const BlogProvider = ({children}) => {
   const[loading, setLoading] = useState(true)
   const [pages, setPages] = useState(0)
   const ENTRIES = 6
+
+  //Paginación
+  const [actualPage, setActualPage] = useState(1);
+  let since = calcularResultado([6, 0, actualPage]);
+  let to = ENTRIES * actualPage;
+  const [entries, setEntries] = useState([since, to]);
 
   useEffect(() => {
     
@@ -65,6 +72,11 @@ const BlogProvider = ({children}) => {
         pages,
         setId,
         blog,
+        ENTRIES,
+        actualPage,
+        entries,
+        setActualPage,
+        setEntries,
       }
     }>
       {children}

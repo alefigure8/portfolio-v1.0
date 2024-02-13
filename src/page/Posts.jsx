@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import Spinner from "../component/Spinner";
-import useMode from "../hooks/useMode";
+import { useEffect, useState } from "react";
 import ButtonPages from "../component/ButtonPages";
+import Post from "../component/Post";
+import SkeletonContent from "../component/SkeletonContent";
 import useBlog from "../hooks/useBlog";
+import useMode from "../hooks/useMode";
+import { setPosition } from "../config/setPosition";
 
 const Posts = () => {
-  const ENTRIES = 6;
 
-  const { blogs, loading, pages } = useBlog();
-  const [entries, setEntries] = useState([0, ENTRIES]);
+  const { blogs, loading, pages, ENTRIES, entries } = useBlog();
   const { mode } = useMode();
 
-  if (loading) {
-    return <Spinner />;
-  }
+  useEffect(() => {
+    setPosition();
+  }, [])
+
 
   return (
     <>
@@ -26,34 +26,14 @@ const Posts = () => {
         >
           Posts
         </h3>
-        <div className="grid md:grid-cols-2 md:gap-6">
-          {blogs?.length > 0 ? (
+        <div className="grid grid-cols-1 px-10 md:px-0 md:grid-cols-2 md:gap-6">
+          {loading ? (
+            <SkeletonContent />
+          ) : blogs?.length > 0 ? (
             blogs
               .map((project) => {
                 return (
-                  <Link to={`/post/${project.id}`} key={project.id}>
-                    <div className="flex flex-col items-center mt-2 mb-6 md:mt-2 transition-all-1 cursor-pointer">
-                      <img
-                        className="md:w-56 md:h-36 rounded-xl"
-                        src={project.img}
-                        alt="project"
-                      />
-                      <p
-                        className={`title-page mt-3 ${
-                          mode ? "text-white" : "text-zinc-800"
-                        }`}
-                      >
-                        {project.title}
-                      </p>
-                      <p
-                        className={`parraph md:text-md mt-1 ${
-                          mode ? "text-white" : "text-zinc-800"
-                        }`}
-                      >
-                        {project.description}
-                      </p>
-                    </div>
-                  </Link>
+                  <Post obj={project} href="post" key={project.id} />
                 );
               })
               .reverse()
@@ -64,13 +44,13 @@ const Posts = () => {
                 mode ? "text-zinc-400" : "text-zinc-800"
               }`}
             >
-              No hay entradas aún cargadas
+              Ups! Al parecer hubo un error! (F5, F5, F5!!!) 🫠
             </p>
           )}
         </div>
       </div>
       {pages > 1 && (
-        <ButtonPages pages={pages} setEntries={setEntries} entries={entries} />
+        <ButtonPages content="post" />
       )}
     </>
   );
