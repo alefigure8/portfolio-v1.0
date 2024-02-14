@@ -8,7 +8,7 @@ const SocialNetwork = ({network}) => {
   return (
     <a href={network.link} target="_blank" key={network.social}>
       <button
-        className={`social-link py-3 px-4 rounded-lg font-semibold parraph-social ${
+        className={`social-link py-3 px-4 rounded-lg parraph-social ${
           mode
             ? "text-teal-200  underline-link "
             : "text-teal-700 underline-link-light underline-link-light"

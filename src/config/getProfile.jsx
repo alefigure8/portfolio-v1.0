@@ -8,7 +8,7 @@ export const getProfile = async () => {
   const ACCESS_KEY = import.meta.env.VITE_ACCESS_KEY;
 
   try {
-    const { data } = await axios(URL, {
+    const { data } = await axios(URL_LOCAL, {
       "Content-Type": "application/json",
     });
 
@@ -34,7 +34,7 @@ export const getProfile = async () => {
     } catch (error) {
       try {
         /* Si falla la API externa, llamamos los datos de la API interna */
-        const { data } = await axios(URL_LOCAL, {
+        const { data } = await axios(URL, {
           "Content-Type": "application/json",
         });
 

@@ -5,7 +5,7 @@ const Button = ({children}) => {
   const {mode} = useMode()
   return (
     <div className='flex justify-center mt-6'>
-      <div className={`rounded-lg py-2 px-4 font-medium hover:bg-teal-500 cursor-pointer transition-all ${mode ? 'text-zinc-800 bg-teal-300 ' : 'text-white bg-teal-700 '}`}>{children}<i className="fa-solid fa-chevron-right ml-5 text-xs"></i></div>
+      <div className={`rounded-lg py-2 px-4 font-medium text-gray-700 cursor-pointer transition-all flex justify-center items-center ${mode ? 'text-zinc-800 bg-button-color-dark' : 'text-white bg-button-color'}`}>{children}<i className="fa-solid fa-chevron-right ml-5 btn-size-icons"></i></div>
     </div>
   )
 }

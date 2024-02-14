@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-toogle: #fbd38d;
+  --color-toogle-hover: #f6ad55;
+  --color-toogle-dark: #805ad5;
+  --color-toogle-dark-hover: #6b46c1;
+  --color-button-dark: #81e6d9;
+  --color-button-hover-dark: #4fd1c5;
+  --color-button: #319795;
+  --color-button-hover: #2c7a7b;
+}
+
 *{
   font-family: 'Open Sans', sans-serif;
 }
@@ -403,4 +414,57 @@
 }
 
 
+/* Toogle */
+.bg-toogle-color{
+  background-color: var(--color-toogle);
+  transition: background-color 0.3s;
+}
 
+.bg-toogle-color:hover{
+  background-color: var(--color-toogle-hover);
+}
+
+.bg-toogle-color-dark{
+  background-color: var(--color-toogle-dark);
+  transition: background-color 0.3s;
+}
+
+.bg-toogle-color-dark:hover{
+  background-color: var(--color-toogle-dark-hover);
+}
+
+/* Button */
+
+.bg-button-color{
+  background-color: var(--color-button);
+  transition: background-color 0.3s;
+}
+
+.bg-button-color:hover{
+  background-color: var(--color-button-hover);
+}
+
+.bg-button-color-dark{
+  background-color: var(--color-button-dark);
+  transition: background-color 0.3s;
+}
+
+.bg-button-color-dark:hover{
+  background-color: var(--color-button-hover-dark);
+}
+
+.btn-size-icons{
+  align-items: center;
+  font-size: 0.60rem;
+  line-height: 1rem;
+}
+
+/* Header */
+
+.icon-header-animation{
+  transition: transform 0.3s ease-out;
+}
+
+.icon-header-animation:hover{
+  transform: rotate(-45deg);
+}

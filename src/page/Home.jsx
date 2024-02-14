@@ -38,7 +38,7 @@ const Home = () => {
         }`}
       >
         <p
-          className={`transition-all ${mode ? "text-white" : "text-zinc-800"}`}
+          className={`transition-all text-base ${mode ? "text-white" : "text-zinc-800"}`}
         >
           Hola 👋, gracias por visitar mi portfolio!
         </p>
@@ -132,7 +132,7 @@ const Home = () => {
         ULTIMOS PROYECTOS
       */}
       <section className="transition-all-6 mt-9">
-        <Title title="Últimos Proyectos" />
+        <Title title="Proyectos" />
         <div className="flex justify-center flex-col md:flex-row mt-6 mb-10 md:gap-6">
           {loading ? (
             <Spinner />
@@ -148,7 +148,7 @@ const Home = () => {
           )}
         </div>
         <Link to="works">
-          <ButtonPrimary>Anteriores trabajos</ButtonPrimary>
+          <ButtonPrimary>Anteriores proyectos</ButtonPrimary>
         </Link>
       </section>
 
@@ -156,7 +156,7 @@ const Home = () => {
         ULTIMOS POSTS
       */}
       <section className="transition-all-6 mt-9">
-        <Title title="Últimos posts" />
+        <Title title="Posts" />
         <div className="flex justify-center flex-col md:flex-row mt-6 md:gap-6">
           {loading ? (
             <Spinner />
