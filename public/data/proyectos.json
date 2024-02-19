@@ -37,7 +37,7 @@
     "id": 3,
     "title": "Rick & Morty API",
     "description": "<p style=\"text-align: justify;\">Soy un gran fanático de la serie <strong>Rick And Morty</strong> (¿quién no?) y cuando me enteré de que existía una <strong>API</strong> de la serie quise realizar un proyecto con <strong>React, Redux, swipeable</strong> y <strong>gsap</strong> que me permitiera traer personajes de manera aleatoria, buscar aquellos que me interesan y guardar las fichas de los que más me gusten.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">El proyecto fue propicio para poder practicar <strong>Redux</strong> e implementar la lógica en cada acción que se realiza. Por ejemplo, las fichas se pueden arrastrar para poder guardarlas, pero también borrarlas de manera individual y que nos traiga un nuevo personaje para ocupar ese espacio.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Con <strong>gsap</strong> realicé algunas animaciones iniciales, generando una pequeña transición al momento de cargar las fichas.</p>",
-    "cover": "https://i.imgur.com/kJ7Tgo4.jpg",
+    "cover": "https://i.imgur.com/IzPrauX.jpg",
     "images": [
       {
         "source": "https://i.imgur.com/a2XYsGI.gif"
@@ -91,7 +91,7 @@
     "id": 6,
     "title": "Gestion Ventas",
     "description": "<h3 style=\"text-align: justify;\"><strong>¿De qué se trata?</strong></h3> <p style=\"text-align: justify;\">Programa de <strong>Gestión de Ventas</strong> realizado para la firma <strong>Velinda Textiles</strong> (Fábrica y locales de ventas de ropa del barrio de Flores)</p> <p>&nbsp;</p> <p style=\"text-align: justify;\">El programa cuenta principalmente con la capacidad de poder realizar cobros de ventas, consultando los productos previamente cargados con sus precios para poder realizar la operación. Podemos tener un control de stock a través de informes diarios, semanales o por un periodo que determinemos. Se pueden confeccionar presupuestos e imprimir. Agendar clientes para luego poder generar reportes.</p> <p>&nbsp;</p> <p style=\"text-align: justify;\">Otro dato a destacar es que es capaz de generar análisis de ventas por producto, por cliente y por día, remarcando la cantidad vendida en promedio, en efectivo, tarjeta, como los porcentajes de categorías más vendidos.</p> <p><br><br></p> <h3 style=\"text-align: justify;\"><strong>Herramientas</strong></h3> <p style=\"text-align: justify;\">Realizado con <strong>.NET Framework</strong> utilizando <strong>Winforms </strong>y <strong>C#</strong>. Los datos son guardados en <strong>CSV</strong> para poder ser utilizado sin una conexión a internet.</p> <p><br><br></p>",
-    "cover": "https://i.imgur.com/HavneCF.jpg",
+    "cover": "https://i.imgur.com/FAMHFLC.jpg",
     "images": [
       {
         "source": "https://alefigure8.github.io/portfolio/img/gestion_1.jpg"
@@ -111,7 +111,7 @@
     "id": 7,
     "title": "Gestión de Restaurante",
     "description": "<div class=\"flex flex-grow flex-col gap-3\">\n <div class=\"min-h-[20px] flex items-start overflow-x-auto whitespace-pre-wrap break-words flex-col gap-4\">\n <div class=\"markdown prose w-full break-words dark:prose-invert light\">\n <h3><strong>¿De qué trata?</strong></h3>\n <p>Trabajo realizado en grupo de 3 integrantes (con integración en GitHub) para la materia <strong>Programación III</strong> de la <strong>Universidad Tecnológica Nacional (UTN - FRGP)</strong> dictada por el docente Maximiliano Sar Fernandez.</p>\n <br>\n <p>Consiste en una aplicación web para administrar pedidos y mesas de un Restaurante. La aplicación permite abrir y cerrar los pedidos para cada mesa. También contiene la información de los insumos (platos, bebidas) que se asignan a los pedidos de las mesas, con esta información precargada para su utilización. Cada ítem tiene precio y cantidades.</p>\n <br>\n <p>La aplicación implementa un sistema de seguridad con ingreso mediante usuario y contraseña. Además, se han definido distintos perfiles de acceso. El perfil \"Gerente\" tiene acceso a todas las funcionalidades del sistema, mientras que el perfil \"Mesero\" solo puede ver las mesas que tiene asignadas y abrir y cerrar pedidos relacionados a ellas.</p>\n <br>\n <p>Al final del día, se pueden generar diversos reportes, como pedidos por mesa, pedidos por mesero/a, entre otros, para obtener información relevante sobre la gestión diaria del Resto. La implementación de este proyecto ha mejorado significativamente la eficiencia y organización del establecimiento.</p>\n <br><br>\n <h3><strong>Herramientas</strong></h3>\n </div>\n </div>\n </div>\n <p>El proyecto fue realizado con <strong>.NET Framework</strong> utilizando <strong>WebForms</strong>,<strong> ADO.NET</strong> y <strong>SQL Server</strong>. Para las vistas se utilizó <strong>HTML</strong>, <strong>CSS </strong>(Boostrap) y <strong>JavaScript</strong>.</p>\n <p>&nbsp;</p>",
-    "cover": "https://i.imgur.com/YrkaXqT.jpg",
+    "cover": "https://i.imgur.com/hpgLUhc.jpg",
     "images": [
       {
         "source": "https://i.imgur.com/gi8ApJo.png"
@@ -134,7 +134,7 @@
     "id": 8,
     "title": "Aplicación Banco",
     "description": "<h3><strong>¿De qué se trata?</strong></h3>\n <p>Aplicación web realizada en grupo de 5 integrantes para la materia <strong>Laboratorio IV</strong> de la <strong>Universidad Tecnológica Nacional </strong>(UTN - FRGP) para la docente Tamara Herrera.</p>\n <p>&nbsp;</p>\n <p>Sistema de gestión para un banco en donde existirán dos tipos de usuarios: administrador del banco y clientes. El mismo contará con Cuentas, Transferencias a terceros o a cuentas propias, Prestamos y la posibilidad de realizar pagos de las cuotas del prestamos. El Administrador puede dar de alta Clientes y sus cuentas, como también aceptar o rechazar los prestamos que se soliciten.</p>\n <p>&nbsp;</p>\n <p>La aplicación además cuenta con sistema de autentificación mediante mail y contraseña, asegurando en cada página que sea un usuario el que las recorra, como también que el usuario no pueda modificar su información para acceder a páginas de otros usuario o realizar pagos desde otra cuenta que no sean las suyas.</p>\n <p><br><br></p>\n <h3><strong>Herramientas</strong></h3>\n <p>Aplicación web realizada en JAVA, con JSP, Servlet, Session y JDBC. Servidor TomCat.</p>",
-    "cover": "https://i.imgur.com/dftZYp3.jpg",
+    "cover": "https://i.imgur.com/CtRs2Dd.jpg",
     "images": [
       {
         "source": "https://i.imgur.com/yvcJ1SI.jpg"

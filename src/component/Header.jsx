@@ -49,10 +49,10 @@ const Header = () => {
           <div className="flex justify-between">
             <ul className="flex lg:justify-center items-center">
               <Link to="/">
-                <div className="flex">
+                <div className="flex icon-header-animation">
                   <img
                     src={mode ? "/icon-title.svg" : "/icon-title-ligth.svg"}
-                    className="mr-1 icon-header-animation"
+                    className="mr-1"
                     alt="icono de codigo de porgramacion"
                   />
                   <li className="title-page mr-5">{profile?.name}</li>
