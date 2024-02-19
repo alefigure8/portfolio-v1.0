@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import Spinner from "../component/Spinner";
-import useMode from "../hooks/useMode";
-import Prism from "prismjs";
 import "../prism.css";
-import useBlog from "../hooks/useBlog";
+import { Link, useParams } from "react-router-dom";
+import { setPosition } from "../config/setPosition";
 import { setTitle } from "../config/setTitle";
+import { useEffect, useState } from "react";
+import Prism from "prismjs";
+import Spinner from "../component/Spinner";
+import useBlog from "../hooks/useBlog";
+import useMode from "../hooks/useMode";
 
 const Post = () => {
   const { id } = useParams();
@@ -28,6 +29,11 @@ const Post = () => {
       }, 1000);
     }
   }, [id, blog]);
+
+  //Colocamos la posicion en la parte superior
+  useEffect(() => {
+    setPosition();
+  }, [])
 
   if (loading) {
     return <Spinner />;

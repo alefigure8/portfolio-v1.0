@@ -1,8 +1,9 @@
 import React from "react";
 import useMode from "../hooks/useMode";
+import Github from "../component/Github";
+import Linkedin from "../component/Linkedin";
 
 const AboutMe = ({ name, rol, img }) => {
-
   const { mode } = useMode();
 
   return (

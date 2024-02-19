@@ -3,6 +3,7 @@ import { setPosition } from "../config/setPosition";
 import AboutMe from "../component/AboutMe";
 import Bio from "../component/Bio";
 import ButtonPrimary from "../component/Button";
+import ButtonSocial from "../component/ButtonSocial";
 import NoContent from "../component/NoContent";
 import Post from "../component/Post";
 import Skeleton from "../component/Skeleton";
@@ -26,9 +27,15 @@ const Home = () => {
   const field_about = profile?.about;
   const field_like = profile?.hobbies;
 
+  //Networks
+  const networks= profile?.networks;
+  const mail = networks?.find((network) => network.social === "Mail").link;
+  const linkedin = networks?.find((network) => network.social === "Linkedin").link;
+
+  //Colocamos la posicion en la parte superior
   useEffect(() => {
     setPosition();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -38,7 +45,9 @@ const Home = () => {
         }`}
       >
         <p
-          className={`transition-all text-base ${mode ? "text-white" : "text-zinc-800"}`}
+          className={`transition-all text-base ${
+            mode ? "text-white" : "text-zinc-800"
+          }`}
         >
           Hola 👋, gracias por visitar mi portfolio!
         </p>
@@ -51,7 +60,11 @@ const Home = () => {
         <Skeleton />
       ) : (
         <section className="md:flex transition-all-1">
-         <AboutMe name={profile?.name} rol={profile?.rol} img={profile?.img_personal}/>
+          <AboutMe
+            name={profile?.name}
+            rol={profile?.rol}
+            img={profile?.img_personal}
+          />
         </section>
       )}
 
@@ -65,16 +78,54 @@ const Home = () => {
         ) : (
           <>
             <p
-              className={`text-justify parraph ${
+              className={`text-justify parraph mb-6 ${
                 mode ? "text-white" : "text-zinc-800"
-              } mb-10`}
+              }`}
               dangerouslySetInnerHTML={{ __html: field_about }}
             ></p>
-            <Link to="works">
+            {/* <Link to="works">
               <ButtonPrimary>Mis trabajos</ButtonPrimary>
-            </Link>
+            </Link> */}
+            <div className="flex justify-center gap-4">
+              <a href={mail} target="_blank">
+                <ButtonSocial icon="fa fa-envelope-open">
+                  Contáctame
+                </ButtonSocial>
+              </a>
+              <a
+                href={linkedin}
+                target="_blank"
+              >
+                <ButtonSocial icon="fa-brands fa-linkedin">
+                  Linkedin
+                </ButtonSocial>
+              </a>
+            </div>
           </>
         )}
+      </section>
+      {/*
+        ULTIMOS PROYECTOS
+      */}
+      <section className="transition-all-6 mt-9">
+        <Title title="Proyectos" />
+        <div className="flex justify-center flex-col md:flex-row mt-6 mb-6 md:gap-6">
+          {loading ? (
+            <Spinner />
+          ) : projects.length > 0 ? (
+            projects
+              .map((project) => {
+                return <Post obj={project} href="work" key={project.id} />;
+              })
+              .reverse()
+              .slice(0, POSTS)
+          ) : (
+            <NoContent msg="No hay proyectos para mostrar" />
+          )}
+        </div>
+        <Link to="works">
+          <ButtonPrimary>Anteriores proyectos</ButtonPrimary>
+        </Link>
       </section>
 
       {/*
@@ -90,6 +141,22 @@ const Home = () => {
               return <Bio key={bio.year} bio={bio} />;
             })}
           </>
+        )}
+      </section>
+
+      {/*
+        REDES 
+      */}
+      <section className="transition-all-5 mt-9" id="redes">
+        <Title title="Redes" />
+        {loadingProfile ? (
+          <Skeleton />
+        ) : (
+          <div className="flex flex-col items-start">
+            {profile?.networks?.map((network) => {
+              return <SocialNetwork key={network.social} network={network} />;
+            })}
+          </div>
         )}
       </section>
 
@@ -113,51 +180,11 @@ const Home = () => {
       </section>
 
       {/*
-        REDES 
-      */}
-      <section className="transition-all-5 mt-9" id="redes">
-        <Title title="Redes" />
-        {loadingProfile ? (
-          <Skeleton />
-        ) : (
-          <div className="flex flex-col items-start">
-            {profile?.networks?.map((network) => {
-              return <SocialNetwork key={network.social} network={network}/>;
-            })}
-          </div>
-        )}
-      </section>
-
-      {/*
-        ULTIMOS PROYECTOS
-      */}
-      <section className="transition-all-6 mt-9">
-        <Title title="Proyectos" />
-        <div className="flex justify-center flex-col md:flex-row mt-6 mb-10 md:gap-6">
-          {loading ? (
-            <Spinner />
-          ) : projects.length > 0 ? (
-            projects
-              .map((project) => {
-                return <Post obj={project} href="work" key={project.id} />;
-              })
-              .reverse()
-              .slice(0, POSTS)
-          ) : (
-            <NoContent msg="No hay proyectos para mostrar" />
-          )}
-        </div>
-        <Link to="works">
-          <ButtonPrimary>Anteriores proyectos</ButtonPrimary>
-        </Link>
-      </section>
-
-      {/*
         ULTIMOS POSTS
       */}
       <section className="transition-all-6 mt-9">
         <Title title="Posts" />
-        <div className="flex justify-center flex-col md:flex-row mt-6 md:gap-6">
+        <div className="flex justify-center flex-col md:flex-row mt-6 mb-6 md:gap-6">
           {loading ? (
             <Spinner />
           ) : blogs.length > 0 ? (

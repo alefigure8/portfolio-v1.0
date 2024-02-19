@@ -11,14 +11,14 @@ const Posts = () => {
   const { blogs, loading, pages, ENTRIES, entries } = useBlog();
   const { mode } = useMode();
 
+  //Colocamos la posicion en la parte superior
   useEffect(() => {
     setPosition();
   }, [])
 
-
   return (
     <>
-      <div className="mt-6">
+      <div className="mb-6">
         <h3
           className={`title-pages ml-2 ${
             mode ? "text-white" : "text-zinc-800"

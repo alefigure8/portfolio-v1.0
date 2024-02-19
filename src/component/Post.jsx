@@ -8,7 +8,7 @@ const Post = ({ obj, href }) => {
 
   return (
     <Link to={`/${href}/${obj.id}`} key={obj.id}>
-      <div className="flex flex-col items-center mt-2 mb-6 md:mt-2 cursor-pointer overflow-hidden hover-img">
+      <div className="flex flex-col items-center mt-2 md:mt-2 cursor-pointer overflow-hidden hover-img">
         <div className="md:w-56 md:h-36 rounded-xl overflow-hidden">
           <img
             src={obj.cover}

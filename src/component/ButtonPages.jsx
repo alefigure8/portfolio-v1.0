@@ -23,10 +23,10 @@ const ButtonPages = ({content}) => {
   }
 
   return (
-    <div className='flex justify-center mt-6'>
+    <div className='flex justify-center'>
       <div className='flex justify-center w-2/5 gap-4'>
-      {actualPage != 1 && <button className={`rounded-lg py-2 px-4 font-medium hover:bg-teal-500 cursor-pointer transition-all ${mode ? 'text-zinc-800 bg-teal-300 ' : 'text-white bg-teal-700 '}`} onClick = {handlePrev}>Anterior</button>}
-      {actualPage != pages && <button className = {`rounded-lg py-2 px-4 font-medium hover:bg-teal-500 cursor-pointer transition-all ${mode ? 'text-zinc-800 bg-teal-300 ' : 'text-white bg-teal-700 '}`} onClick = {handleNext}>Siguientes</button>}
+      {actualPage != 1 && <button className={`rounded-lg py-2 px-4 font-medium hover:bg-teal-500 cursor-pointer transition-all flex justify-center items-center ${mode ? 'text-zinc-800 bg-teal-300 ' : 'text-white bg-teal-700 '}`} onClick = {handlePrev}><i className="fa-solid fa-chevron-left mr-5 btn-size-icons"></i>Anterior</button>}
+      {actualPage != pages && <button className = {`rounded-lg py-2 px-4 font-medium hover:bg-teal-500 cursor-pointer transition-all flex justify-center items-center ${mode ? 'text-zinc-800 bg-teal-300 ' : 'text-white bg-teal-700 '}`} onClick = {handleNext}>Siguientes<i className="fa-solid fa-chevron-right ml-5 btn-size-icons"></i></button>}
       </div>
     </div> 
   )

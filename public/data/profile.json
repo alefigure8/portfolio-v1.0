@@ -1,9 +1,9 @@
 {
   "name": "Alejandro Gomez Nieto",
-  "rol": "Junior Backend Developer",
+  "rol": "Desarrolaldor web",
   "img_personal": "https://i.imgur.com/cg6cmWm.jpg",
   "cv": "https://drive.google.com/file/d/1BPGp62kGggijis29yi460mqrwRafeZ1W",
-  "about": "Soy un desarrolador backend viviendo en Argentina, apasionado por desarrollar aplicaciones que sean de utilidad para los usuarios.<br /> Cuento con experiencia en varios lenguajes, ya sea realizando aplicaciones webs con <span style=\"font-weight:bold\">JavaScript, C# (.NET) y JAVA</span>, como aplicaciones de software con <span style=\"font-weight:bold\">C++</span>.<br /> Actualmente estoy finalizando la carrera de <span style=\"font-weight:bold\">Técnico Universitario en Programación </span> en la <span style=\"font-weight:bold\">Universidad Tecnológica Nacional (UTN)</span>, en donde también tengo el enorme agrado de poder compartir mis conocimientos como Ayudante de Cátedra en la materia <span style=\"font-weight:bold\">Programación I</span>. <br /> Publico contentenido sobre lo que voy aprendiendo en mi <a href='/posts' style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">Blog</a>",
+  "about": "Soy un desarrolador web viviendo en Argentina y trabajando en <span style=\"font-weight:bold\">Zeroth SRL</span> (Agencia de Noticias) como frontend. Me apasionado desarrollar <a href='/works' style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">aplicaciones</a> que sean de utilidad para los usuarios.<br /> Cuento con experiencia en varios lenguajes, ya sea realizando aplicaciones webs con <span style=\"font-weight:bold\">JavaScript, C# (.NET) y JAVA</span>, como aplicaciones de software con <span style=\"font-weight:bold\">C++</span>.<br /> Actualmente estoy finalizando la carrera de <span style=\"font-weight:bold\">Técnico Universitario en Programación </span> en la <span style=\"font-weight:bold\">Universidad Tecnológica Nacional (UTN)</span>, en donde también tengo el enorme agrado de poder compartir mis conocimientos como Ayudante de Cátedra en la materia <span style=\"font-weight:bold\">Programación I</span>. <br /> Publico contentenido sobre lo que voy aprendiendo en mi <a href='/posts' style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">Blog</a>",
   "bio": [
     {
       "year": "2024",
@@ -59,8 +59,8 @@
       "link": "https://medium.com/@alegomeznieto"
     },
     {
-      "social": "Twitter",
-      "icon": "fa-brands fa-twitter",
+      "social": "X",
+      "icon": "fa-brands fa-x-twitter",
       "user": "Twitter",
       "link": "https://twitter.com/alegomeznieto"
     },
