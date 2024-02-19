@@ -6,7 +6,7 @@ import axios from "axios";
  * @returns {Promise<Array>} An array of blog data.
  */
 export const getBlogs = async () => {
-  //const URL_LOCAL = import.meta.env.VITE_API_LOCAL_BLOGS;
+  const URL_LOCAL = import.meta.env.VITE_API_LOCAL_BLOGS;
   const URL = import.meta.env.VITE_API_EXTERNAL_BLOGS;
   const URL_JSONBIN = import.meta.env.VITE_API_EXTERNAL_BLOGS_JSONBIN;
   const MASTER_KEY = import.meta.env.VITE_MASTER_KEY;
@@ -37,7 +37,19 @@ export const getBlogs = async () => {
         return data.record;
       }
     } catch (error) {
-      console.log(error);
+      try {
+        const { data } = await axios(URL_LOCAL, {
+          "Content-Type": "application/json",
+        });
+    
+        if (data?.length > 0) {
+          return data;
+        }
+    
+        return [];
+      } catch (error) {
+        
+      }
     }
 
     return [];

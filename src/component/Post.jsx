@@ -8,12 +8,13 @@ const Post = ({ obj, href }) => {
 
   return (
     <Link to={`/${href}/${obj.id}`} key={obj.id}>
-      <div className="flex flex-col items-center mt-2 mb-6 md:mt-2 transition-all-1 cursor-pointer">
-        <img
-          className="md:w-56 md:h-36 rounded-xl"
-          src={obj.cover}
-          alt={obj.title}
-        />
+      <div className="flex flex-col items-center mt-2 md:mt-2 cursor-pointer overflow-hidden hover-img">
+        <div className="md:w-56 md:h-36 rounded-xl overflow-hidden">
+          <img
+            src={obj.cover}
+            alt={obj.title}
+          />
+        </div>
         <p
           className={`title-page mt-3 ${mode ? "text-white" : "text-zinc-800"}`}
         >

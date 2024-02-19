@@ -1,7 +1,8 @@
 import "../prism.css";
+import { Link, useParams } from "react-router-dom";
+import { setPosition } from "../config/setPosition";
 import { setTitle } from "../config/setTitle";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
 import Demo from "../component/Demo";
 import Gallery from "../component/Gallery";
 import Github from "../component/Github";
@@ -24,6 +25,11 @@ const Post = () => {
       setLoading(false);
     }
   }, [id, project]);
+
+  //Colocamos la posicion en la parte superior
+  useEffect(() => {
+    setPosition();
+  }, []);
 
   if (loading) {
     return <Spinner />;

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-toogle: #fbd38d;
+  --color-toogle-hover: #f6ad55;
+  --color-toogle-dark: #805ad5;
+  --color-toogle-dark-hover: #6b46c1;
+  --color-button-dark: #81e6d9;
+  --color-button-hover-dark: #4fd1c5;
+  --color-button: #319795;
+  --color-button-hover: #2c7a7b;
+  --color-border-gray: ##666;
+}
+
 *{
   font-family: 'Open Sans', sans-serif;
 }
@@ -173,7 +185,7 @@
 
 .hero-img {
   position: relative;
-  top: 40px;
+  top: 15px;
 }
 
 
@@ -223,7 +235,7 @@
 @media screen and (min-width: 960px) {
   canvas,
   .h-500{
-    height: 400px;
+    height: 360px;
   }
  }
 
@@ -403,4 +415,101 @@
 }
 
 
+/* Toogle */
+.bg-toogle-color{
+  background-color: var(--color-toogle);
+  transition: background-color 0.3s;
+}
 
+.bg-toogle-color:hover{
+  background-color: var(--color-toogle-hover);
+}
+
+.bg-toogle-color-dark{
+  background-color: var(--color-toogle-dark);
+  transition: background-color 0.3s;
+}
+
+.bg-toogle-color-dark:hover{
+  background-color: var(--color-toogle-dark-hover);
+}
+
+/* Button */
+
+.bg-button-color{
+  background-color: var(--color-button);
+  transition: background-color 0.3s;
+}
+
+.bg-button-color:hover{
+  background-color: var(--color-button-hover);
+}
+
+.bg-button-color-dark{
+  background-color: var(--color-button-dark);
+  transition: background-color 0.3s;
+}
+
+.bg-button-color-dark:hover{
+  background-color: var(--color-button-hover-dark);
+}
+
+.btn-size-icons{
+  align-items: center;
+  font-size: 0.60rem;
+  line-height: 1rem;
+}
+
+/* Header */
+
+.icon-header-animation img{
+  transition: transform 0.3s ease-out;
+}
+
+.icon-header-animation:hover img{
+  transform: rotate(-45deg);
+}
+
+.hover-img:hover div img{
+  transform: scale(1.0);
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.hover-img div img{
+  transform: scale(1.05);
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.hover-img:hover div{
+  border-color: rgba(250, 250, 250, 0.3);
+  border-width: 1px;
+  border-style: solid;
+  transition: border-color 0.5s;
+}
+
+.hover-img div{
+  border-color: rgba(250, 250, 250, 0.2);
+  border-width: 1px;
+  border-style: solid;
+  transition: border-color 0.5s;
+}
+
+.border-line
+{
+  border-color: rgba(250, 250, 250, 0);
+  border-width: 1px;
+  border-style: solid;
+  transition: border-color 0.5s;
+}
+
+.border-line:hover {
+  border-color: rgba(250, 250, 250, 0.5);
+  border-width: 1px;
+  border-style: solid;
+  transition: border-color 0.5s;
+}

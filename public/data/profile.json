@@ -1,21 +1,21 @@
 {
   "name": "Alejandro Gomez Nieto",
-  "rol": "Junior Backend Developer",
+  "rol": "Desarrolaldor web",
   "img_personal": "https://i.imgur.com/cg6cmWm.jpg",
-  "cv": "https://drive.google.com/file/d/1BPGp62kGggijis29yi460mqrwRafeZ1W/view?usp=sharing",
-  "about": "Soy un desarrolador backend viviendo en Argentina, apasionado por desarrollar aplicaciones que me exijan continuar aprendiendo. Trabajé con diversos lenguajes, ya sea realizando aplicaciones webs con JavaScript y C# (.NET), como aplicaciones de software con C++. <br /> Actualmente estoy realizando la carrera de <span className=\"font-bold\">Técnico Universitario en Programación </span>en la Universidad Tecnológica Nacional, en la que también me desenvuelvo como Ayudante de Cátedra en la materia Programación 1. <br /> Publico contentenido sobre lo que voy aprendiendo en mi <a href='/posts' style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">Blog</a>",
+  "cv": "https://drive.google.com/file/d/1BPGp62kGggijis29yi460mqrwRafeZ1W",
+  "about": "Soy un desarrolador web viviendo en Argentina y trabajando en <span style=\"font-weight:bold\">Zeroth SRL</span> (Agencia de Noticias) como frontend. Me apasionado desarrollar <a href='/works' style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">aplicaciones</a> que sean de utilidad para los usuarios.<br /> Cuento con experiencia en varios lenguajes, ya sea realizando aplicaciones webs con <span style=\"font-weight:bold\">JavaScript, C# (.NET) y JAVA</span>, como aplicaciones de software con <span style=\"font-weight:bold\">C++</span>.<br /> Actualmente estoy finalizando la carrera de <span style=\"font-weight:bold\">Técnico Universitario en Programación </span> en la <span style=\"font-weight:bold\">Universidad Tecnológica Nacional (UTN)</span>, en donde también tengo el enorme agrado de poder compartir mis conocimientos como Ayudante de Cátedra en la materia <span style=\"font-weight:bold\">Programación I</span>. <br /> Publico contentenido sobre lo que voy aprendiendo en mi <a href='/posts' style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">Blog</a>",
   "bio": [
     {
       "year": "2024",
-      "goal": "Hoy me encuentro siendo ayudante en la materia Programación I de la Universidad Tecnológica Nacional (UTN), junto al profesor titular Maximiliano Sar Fernandez <a href=\"https://www.youtube.com/maxiprograma\" target=\"_blank\"><span style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">(Maxi Programa)</span></a>."
+      "goal": "Hoy me encuentro siendo ayudante en la materia Programación I de la  <span style=\"font-weight:bold\">Universidad Tecnológica Nacional (UTN)</span>, junto al profesor titular  <span style=\"font-weight:bold\">Maximiliano Sar Fernandez</span> <a href=\"https://www.youtube.com/maxiprograma\" target=\"_blank\"><span style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">(Maxi Programa)</span></a>."
     },
     {
       "year": "2023",
-      "goal": "Cursé el último año de la carrera de Técnico Universitario en Programación en la Universidad Tecnológica Nacional (UTN), con un promedio de 9.6"
+      "goal": "Cursé el último año de la carrera de Técnico Universitario en Programación en la <span style=\"font-weight:bold\">Universidad Tecnológica Nacional (UTN)</span>, con un promedio de 9.6"
     },
     {
       "year": "2022",
-      "goal": "Empecé a trabajar en Zeroth SRL, portal de noticias sobre la obra pública, como frontend junior, realizando tareas con JavaScript, HTML y CSS."
+      "goal": "Empecé a trabajar en <span style=\"font-weight:bold\">Zeroth SRL</span>, portal de noticias sobre la obra pública, como frontend junior, realizando tareas con JavaScript, HTML y CSS."
     },
     {
       "year": "2019",
@@ -27,15 +27,15 @@
     },
     {
       "year": "2011",
-      "goal": "Trabajé desarrollando páginas web junto al Legislador de la Ciudad de Buenos Aires Rafael Gentili."
+      "goal": "Trabajé desarrollando páginas web junto al Legislador de la Ciudad de Buenos Aires <a href=\"http://www.rafagentili.com.ar/\" target=\"_blank\"><span style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">Rafael Gentili</a>."
     },
     {
       "year": "2008",
-      "goal": "Me recibí de la carrera de Producción Audiovisual en el Centro de Investigación Cinematográfico."
+      "goal": "Me recibí de la carrera de <span style=\"font-weight:bold\">Producción Audiovisual en el Centro de Investigación Cinematográfico</span>."
     },
     {
       "year": "2001",
-      "goal": "Comencé a desarrollar sitios webs, realizando la primera versión del portal de noticias Obrapública.com"
+      "goal": "Comencé a desarrollar sitios webs, realizando la primera versión del portal de noticias <span style=\"font-weight:bold\">Obrapública.com</span>"
     }
   ],
   "hobbies": "Escuchar Ramones, Elliott Smith y All Them Witches; leer libros de Foster Wallace, Salinger y Philip K. Dick; el cine de Paul Thomas Anderson y Stanley Kubrick; sacar <a href=\"https://www.flickr.com/photos/stupiditytries/\" target=\"_blank\"><span style=\"color:#ff63c3;textDecoration:none;cursor:pointer;font-weight:bold\">fotografías</span></a> en recitales y aprender todo lo que me llame un poco la atención.",
@@ -43,32 +43,32 @@
     {
       "social": "Github",
       "icon": "fa-brands fa-github",
-      "user": "@alefigure8",
+      "user": "Github",
       "link": "http://github.com/alefigure8"
     },
     {
-      "social": "Twitter",
-      "icon": "fa-brands fa-twitter",
-      "user": "@alegomeznieto",
-      "link": "https://twitter.com/alegomeznieto"
-    },
-    {
-      "social": "Instagram",
-      "icon": "fa-brands fa-instagram",
-      "user": "@alegomeznieto",
-      "link": "https://www.instagram.com/alegomeznieto/"
+      "social": "Linkedin",
+      "icon": "fa-brands fa-linkedin",
+      "user": "Linkedin",
+      "link": "https://www.linkedin.com/in/alejandro-gomez-nieto"
     },
     {
       "social": "Medium",
       "icon": "fa-brands fa-medium",
-      "user": "@alegomeznieto",
+      "user": "Medium",
       "link": "https://medium.com/@alegomeznieto"
+    },
+    {
+      "social": "X",
+      "icon": "fa-brands fa-x-twitter",
+      "user": "Twitter",
+      "link": "https://twitter.com/alegomeznieto"
     },
     {
       "social": "Mail",
       "icon": "fa fa-envelope-open",
-      "user": "gomeznieto@pm.me",
-      "link": "mailto:gomeznieto@pm.me"
+      "user": "gomeznieto@gmail.com",
+      "link": "mailto:gomeznieto@gmail.com"
     }
   ]
 }

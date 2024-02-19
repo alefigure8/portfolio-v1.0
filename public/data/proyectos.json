@@ -1,69 +1,156 @@
 [
-     {
-      "id": 1,
-      "title": "Gran Cerdo (Juego)",
-      "description": "<p>Para la entrega final de la materia Laboratorio de la Programación en la Universidad Tecnológica Nacional, tuve que desarrollar un juego en C++ a partir de unas reglas que me fueron dadas.</p> <p>&nbsp;</p> <p>El mismo debía contar con una serie de requisitos, como un menú inicial, estadísticas de juego y créditos, además del juego en sí, el cual se desarrolla a partir de una serie de decisiones que se debe tomar, como seguir arrojando dados o ceder el turno.</p> <p>&nbsp;</p> <p><a href=\"https://imgur.com/RHiNvmH\"><img title=\"source: imgur.com\" src=\"https://i.imgur.com/RHiNvmH.gif\"></a></p>"      ,
-      "img": "https://i.imgur.com/zFhs7vc.jpg",
-      "category": "C++, Rlutil",
-      "link": "https://github.com/alefigure8/UTN---Juego-Parcial"
-    },
-    {
-      "id": 2,
-      "title": "Wordles (Juego)",
-      "description": "<p style=\"text-align: justify;\">A principios del 2022 me encontraba realizando la carrera de <strong>Backend</strong> en <strong>CoderHouse</strong>, y para el trabajo final de la primera parte teníamos que realizar una página solamente utilizando <strong>Javascript</strong>, <strong>HTML</strong> y <strong>CSS</strong>.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Estuve pensando durante un tiempo qué es lo que quería hacer (un landing page, un e-commerce... ) Entonces vi que estaba siendo muy utilizado el juego <strong>Wordles</strong> y que podía ser un proyecto divertido intentar hacer un clon.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">La página me llevó cerca de 40 horas, dentro las cuales tuve que pensar cómo hacer para que al presionar una tecla las letras se fueran colocando en el casillero correspondiente; cómo hacer para que la aplicación entienda que se llegó al final y al presionar 'enter' entonces se debía pasar a la siguiente línea.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Finalmente, la página quedó realizada y obtuve el mayor puntaje de la clase.</p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/wordles_1.jpg\"></p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/wordles_2.jpg\"></p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/wordles_3.jpg\"></p> <p>&nbsp;</p> <p><strong><span style=\"color: rgb(255, 99, 195);\"><a style=\"color: rgb(194, 177, 81);\" href=\"https://wordle-tan.vercel.app/\" target=\"_blank\" rel=\"noopener\">Link de la página</a></span></strong></p>",
-      "img": "https://i.imgur.com/KMMUxlR.jpg",
-      "category": "Javascript, HTML, CSS",
-      "link": "https://github.com/alefigure8/Juego---TP-Final"
-    },
-    {
-      "id": 3,
-      "title": "Rick & Morty API",
-      "description": "<p style=\"text-align: justify;\">Soy un gran fanático de la serie <strong>Rick And Morty</strong> (¿quién no?) y cuando me enteré de que existía una <strong>API</strong> de la serie quise realizar un proyecto con <strong>React, Redux, swipeable</strong> y <strong>gsap</strong> que me permitiera traer personajes de manera aleatoria, buscar aquellos que me interesan y guardar las fichas de los que más me gusten.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">El proyecto fue propicio para poder practicar <strong>Redux</strong> e implementar la lógica en cada acción que se realiza. Por ejemplo, las fichas se pueden arrastrar para poder guardarlas, pero también borrarlas de manera individual y que nos traiga un nuevo personaje para ocupar ese espacio.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Con <strong>gsap</strong> realicé algunas animaciones iniciales, generando una pequeña transición al momento de cargar las fichas.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">El proyecto fue subido a <strong>Vercel</strong>.</p> <p>&nbsp;</p> <p><img src=\"https://i.imgur.com/a2XYsGI.gif\" alt=\"Rick and morty page\" width=\"500\"></p> <p>&nbsp;</p> <p><strong><span style=\"color: rgb(255, 99, 195);\"><a style=\"color: rgb(74, 213, 255);\" href=\"https://rick-and-morty-alegomeznieto.vercel.app/\" target=\"_blank\" rel=\"noopener\">Link de la página</a></span></strong></p>"
-      ,
-      "img": "https://i.imgur.com/kJ7Tgo4.jpg",
-      "imagenes": ["img/rickmorty_1.gif", "img/rickmorty_2.jpg", "img/rickmorty_3.jpg"],
-      "category": "React, Redux, Swipeable, gsap",
-      "link": "https://github.com/alefigure8/rick-api"
-    },
-    {
-      "id": 4,
-      "title": "Administrador de Tareas",
-      "description": "<p style=\"text-align: justify;\"><img>Uno de los primeros proyectos que realic&eacute; con <span style=\"color: rgb(45, 194, 107);\"><strong>React </strong></span>fue un gestor de tareas que imitara la din&aacute;mica de p&aacute;ginas como Trello.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">En el <span style=\"color: rgb(45, 194, 107);\"><strong>Backend</strong> </span>utilic&eacute; MongoDB como base de datos, Nodejs, Express, JWT y Bcryptjs.</p> <p style=\"text-align: justify;\">En el <span style=\"color: rgb(45, 194, 107);\"><strong>frontend </strong></span>arm&eacute; el sitio con React, Reacto Router, axios, Javascript y Tailwind.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Cuenta con una p&aacute;gina de creaci&oacute;n de usuario y autentificaci&oacute;n.</p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://i.imgur.com/3a03Vp4.gif\"></p> <p>&nbsp;</p> <p style=\"text-align: justify;\">La interfaz cuenta con una barra latearal con la cual crear Proyectos y tres sectores a los cuales poder arrastrar y soltar la tarea creada, dependiendo de la &eacute;tapa en la que nos encontremos.</p> <p>&nbsp;</p> <p><img><img title=\"source: imgur.com\" src=\"https://i.imgur.com/D2RDLDG.gif\"></p> <p>&nbsp;</p> <p style=\"text-align: justify;\">Cada una de las tareas se puede editar y eliminar. A la vez, las tareas van orden&aacute;ndose de la primera realizada hasta la &uacute;ltima.</p> <p>&nbsp;</p> <p><img><img title=\"source: imgur.com\" src=\"https://i.imgur.com/J9Qadie.gif\"></p> <p>&nbsp;</p> <p>El front del sitio fue subido a <span style=\"color: rgb(45, 194, 107);\"><strong>Netifly </strong></span>y el backend a <span style=\"color: rgb(45, 194, 107);\"><strong>Heroku</strong></span>.</p> <p>&nbsp;</p> <p style=\"color: rgb(45, 194, 107);\"><strong><a href=\"https://wizardly-agnesi-b70b8d.netlify.app/\" target=\"_blank\" rel=\"noopener\">Link de la p&aacute;gina</a></strong></p>"
-      ,
-      "img": "https://i.imgur.com/P6E3Xvn.jpg",
-      "category": "React, Nodejs, MongoDB",
-      "link": "https://github.com/alefigure8/dashboard-react/"
-    },
-    {
-      "id": 5,
-      "title": "Tank Force (Juego)",
-      "description": "<p style=\"text-align: justify;\">Reversión del clásico <strong>Battle City</strong>, realizado con <strong>C++</strong> y <strong>SFML</strong>. El juego fue repensado para tener una cuantas características nuevas, como la posibilidad de girar la torreta, incapacitar al enemigo, arrastrar vehículos y tanques destruidos y daño por explosión. El juego cuenta con 3 niveles de dificultad, los cuales se diferencian por la velocidad de los enemigos, la cantidad de enemigos y la cantidad de vidas. El juego cuenta con un sistema de guardado de puntajes, el cual se almacena en un archivo TXT.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/tank_force_1.jpg\"></p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/tank_force_2.jpg\"></p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/tank_force_3.jpg\"></p>",
-      "img": "https://i.imgur.com/JlbzPPT.jpg",
-      "category": "C++, SFML",
-      "link": "https://github.com/alefigure8/Juego---TP-Final/"
-    },
-    {
-      "id": 6,
-      "title": "Gestion Ventas",
-      "description": "<h3 style=\"text-align: justify;\"><strong>¿De qué se trata?</strong></h3> <p style=\"text-align: justify;\">Programa de <strong>Gestión de Ventas</strong> realizado para la firma <strong>Velinda Textiles</strong> (Fábrica y locales de ventas de ropa del barrio de Flores)</p> <p>&nbsp;</p> <p style=\"text-align: justify;\">El programa cuenta principalmente con la capacidad de poder realizar cobros de ventas, consultando los productos previamente cargados con sus precios para poder realizar la operación. Podemos tener un control de stock a través de informes diarios, semanales o por un periodo que determinemos. Se pueden confeccionar presupuestos e imprimir. Agendar clientes para luego poder generar reportes.</p> <p>&nbsp;</p> <p style=\"text-align: justify;\">Otro dato a destacar es que es capaz de generar análisis de ventas por producto, por cliente y por día, remarcando la cantidad vendida en promedio, en efectivo, tarjeta, como los porcentajes de categorías más vendidos.</p> <p><br><br></p> <h3 style=\"text-align: justify;\"><strong>Herramientas</strong></h3> <p style=\"text-align: justify;\">Realizado con <strong>.NET Framework</strong> utilizando <strong>Winforms </strong>y <strong>C#</strong>. Los datos son guardados en <strong>CSV</strong> para poder ser utilizado sin una conexión a internet.</p> <p><br><br></p> <h3 style=\"text-align: justify;\"><strong>capturas</strong></h3> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/gestion_1.jpg\"></p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/gestion_2.jpg\"></p> <p>&nbsp;</p> <p><img title=\"source: imgur.com\" src=\"https://alefigure8.github.io/portfolio/img/gestion_3.jpg\"></p>",
-      "img": "https://i.imgur.com/6rxFjvC.jpg",
-      "category": ".NET, ADO.NET, C#",
-      "link": "https://github.com/alefigure8/Gestion-de-Ventas-Archivo-"
-    },
-    {
-      "id": 7,
-      "title": "Gestión de Restaurante",
-      "description":"<div class=\"flex flex-grow flex-col gap-3\">\n <div class=\"min-h-[20px] flex items-start overflow-x-auto whitespace-pre-wrap break-words flex-col gap-4\">\n <div class=\"markdown prose w-full break-words dark:prose-invert light\">\n <h3><strong>¿De qué trata?</strong></h3>\n <p>Trabajo realizado en grupo de 3 integrantes (con integración en GitHub) para la materia <strong>Programación III</strong> de la <strong>Universidad Tecnológica Nacional (UTN - FRGP)</strong> dictada por el docente Maximiliano Sar Fernandez.</p>\n <br>\n <p>Consiste en una aplicación web para administrar pedidos y mesas de un Restaurante. La aplicación permite abrir y cerrar los pedidos para cada mesa. También contiene la información de los insumos (platos, bebidas) que se asignan a los pedidos de las mesas, con esta información precargada para su utilización. Cada ítem tiene precio y cantidades.</p>\n <br>\n <p>La aplicación implementa un sistema de seguridad con ingreso mediante usuario y contraseña. Además, se han definido distintos perfiles de acceso. El perfil \"Gerente\" tiene acceso a todas las funcionalidades del sistema, mientras que el perfil \"Mesero\" solo puede ver las mesas que tiene asignadas y abrir y cerrar pedidos relacionados a ellas.</p>\n <br>\n <p>Al final del día, se pueden generar diversos reportes, como pedidos por mesa, pedidos por mesero/a, entre otros, para obtener información relevante sobre la gestión diaria del Resto. La implementación de este proyecto ha mejorado significativamente la eficiencia y organización del establecimiento.</p>\n <br><br>\n <h3><strong>Herramientas</strong></h3>\n </div>\n </div>\n </div>\n <p>El proyecto fue realizado con <strong>.NET Framework</strong> utilizando <strong>WebForms</strong>,<strong> ADO.NET</strong> y <strong>SQL Server</strong>. Para las vistas se utilizó <strong>HTML</strong>, <strong>CSS </strong>(Boostrap) y <strong>JavaScript</strong>.</p>\n <p>&nbsp;</p>\n <p><br><br></p>\n <h3><strong>Capturas</strong></h3>\n <p><img title=\"source: imgur.com\" src=\"https://i.imgur.com/gi8ApJo.png\"></p>\n <p>&nbsp;</p>\n <p><img title=\"source: imgur.com\" src=\"https://i.imgur.com/Xgk4q6n.png\"></p>\n <p>&nbsp;</p>\n <p><img title=\"source: imgur.com\" src=\"https://i.imgur.com/Yn3wHCc.png\"></p>\n <p>&nbsp;</p>\n <p><img title=\"source: imgur.com\" src=\"https://i.imgur.com/0tdxbGm.png\"></p>\n <p>&nbsp;</p>",
-      "img": "https://i.imgur.com/JVj4Zzq.jpg",
-      "category": ".NET, ADO.NET, SQL Server",
-      "link": "https://github.com/alefigure8/TPCuatrimestral_equipo-25/"
-    },
-    {
-      "id": 8,
-      "title": "Aplicación Banco",
-      "description": "<h3><strong>¿De qué se trata?</strong></h3>\n <p>Aplicación web realizada en grupo de 5 integrantes para la materia <strong>Laboratorio IV</strong> de la <strong>Universidad Tecnológica Nacional </strong>(UTN - FRGP) para la docente Tamara Herrera.</p>\n <p>&nbsp;</p>\n <p>Sistema de gestión para un banco en donde existirán dos tipos de usuarios: administrador del banco y clientes. El mismo contará con Cuentas, Transferencias a terceros o a cuentas propias, Prestamos y la posibilidad de realizar pagos de las cuotas del prestamos. El Administrador puede dar de alta Clientes y sus cuentas, como también aceptar o rechazar los prestamos que se soliciten.</p>\n <p>&nbsp;</p>\n <p>La aplicación además cuenta con sistema de autentificación mediante mail y contraseña, asegurando en cada página que sea un usuario el que las recorra, como también que el usuario no pueda modificar su información para acceder a páginas de otros usuario o realizar pagos desde otra cuenta que no sean las suyas.</p>\n <p><br><br></p>\n <h3><strong>Herramientas</strong></h3>\n <p>Aplicación web realizada en JAVA, con JSP, Servlet, Session y JDBC. Servidor TomCat.</p>\n <p><br><br></p>\n <h3><strong>Capturas</strong></h3>\n <p>&nbsp;</p>\n <p><img src=\"https://i.imgur.com/yvcJ1SI.jpg\"><br><img src=\"https://i.imgur.com/nSpCkZg.jpg\"><br><img src=\"https://i.imgur.com/4LhnEGf.jpg\"><br><img src=\"https://i.imgur.com/90iVhWB.jpg\"> <br><img src=\"https://i.imgur.com/4j3G0iT.jpg\"></p>",
-      "img": "https://i.imgur.com/t08zbAa.jpg",
-      "category": "JAVA, JSP, SERVLET, JDBC",
-      "link": "https://github.com/alefigure8/JAVA_LaboratorioIV/tree/main/TPINT_GRUPO_5_LAB4/"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Gran Cerdo (Juego)",
+    "description": "<p>Para la entrega final de la materia Laboratorio de la Programación en la Universidad Tecnológica Nacional, tuve que desarrollar un juego en C++ a partir de unas reglas que me fueron dadas.</p> <p>&nbsp;</p> <p>El mismo debía contar con una serie de requisitos, como un menú inicial, estadísticas de juego y créditos, además del juego en sí, el cual se desarrolla a partir de una serie de decisiones que se debe tomar, como seguir arrojando dados o ceder el turno.</p>",
+    "cover": "https://i.imgur.com/zFhs7vc.jpg",
+    "images": [
+      {
+        "source": "https://imgur.com/RHiNvmH.jpg"
+      }
+    ],
+    "category": "C++, Rlutil",
+    "github": "https://github.com/alefigure8/UTN---Juego-Parcial",
+    "demo": ""
+  },
+  {
+    "id": 2,
+    "title": "Wordles - Clon del juego",
+    "description": "<p style=\"text-align: justify;\">A principios del 2022 me encontraba realizando la carrera de <strong>Backend</strong> en <strong>CoderHouse</strong>, y para el trabajo final de la primera parte teníamos que realizar una página solamente utilizando <strong>Javascript</strong>, <strong>HTML</strong> y <strong>CSS</strong>.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Estuve pensando durante un tiempo qué es lo que quería hacer (un landing page, un e-commerce... ) Entonces vi que estaba siendo muy utilizado el juego <strong>Wordles</strong> y que podía ser un proyecto divertido intentar hacer un clon.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">La página me llevó cerca de 40 horas, dentro las cuales tuve que pensar cómo hacer para que al presionar una tecla las letras se fueran colocando en el casillero correspondiente; cómo hacer para que la aplicación entienda que se llegó al final y al presionar 'enter' entonces se debía pasar a la siguiente línea.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Finalmente, la página quedó realizada y obtuve el mayor puntaje de la clase.</p>",
+    "cover": "https://i.imgur.com/KMMUxlR.jpg",
+    "images": [
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/wordles_1.jpg"
+      },
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/wordles_2.jpg"
+      },
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/wordles_3.jpg"
+      }
+    ],
+    "category": "Javascript, HTML, CSS",
+    "github": "https://github.com/alefigure8/Juego---TP-Final",
+    "demo": "https://wordle-tan.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "Rick & Morty API",
+    "description": "<p style=\"text-align: justify;\">Soy un gran fanático de la serie <strong>Rick And Morty</strong> (¿quién no?) y cuando me enteré de que existía una <strong>API</strong> de la serie quise realizar un proyecto con <strong>React, Redux, swipeable</strong> y <strong>gsap</strong> que me permitiera traer personajes de manera aleatoria, buscar aquellos que me interesan y guardar las fichas de los que más me gusten.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">El proyecto fue propicio para poder practicar <strong>Redux</strong> e implementar la lógica en cada acción que se realiza. Por ejemplo, las fichas se pueden arrastrar para poder guardarlas, pero también borrarlas de manera individual y que nos traiga un nuevo personaje para ocupar ese espacio.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Con <strong>gsap</strong> realicé algunas animaciones iniciales, generando una pequeña transición al momento de cargar las fichas.</p>",
+    "cover": "https://i.imgur.com/IzPrauX.jpg",
+    "images": [
+      {
+        "source": "https://i.imgur.com/a2XYsGI.gif"
+      }
+    ],
+    "category": "React, Redux, Swipeable, gsap",
+    "github": "https://github.com/alefigure8/rick-api",
+    "demo": "https://rick-and-morty-alegomeznieto.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "Administrador de Tareas",
+    "description": "<p style=\"text-align: justify;\"><img>Uno de los primeros proyectos que realic&eacute; con <span style=\"color: rgb(45, 194, 107);\"><strong>React </strong></span>fue un gestor de tareas que imitara la din&aacute;mica de p&aacute;ginas como Trello.</p><p style=\"text-align: justify;\">En el <span style=\"color: rgb(45, 194, 107);\"><strong>Backend</strong> </span>utilic&eacute; MongoDB como base de datos, Nodejs, Express, JWT y Bcryptjs.</p> <p style=\"text-align: justify;\">En el <span style=\"color: rgb(45, 194, 107);\"><strong>frontend </strong></span>arm&eacute; el sitio con React, Reacto Router, axios, Javascript y Tailwind.</p> <p style=\"text-align: justify;\">&nbsp;</p> <p style=\"text-align: justify;\">Cuenta con una p&aacute;gina de creaci&oacute;n de usuario y autentificaci&oacute;n.</p><p style=\"text-align: justify;\">La interfaz cuenta con una barra latearal con la cual crear Proyectos y tres sectores a los cuales poder arrastrar y soltar la tarea creada, dependiendo de la &eacute;tapa en la que nos encontremos.</p> <p>&nbsp;</p> <p style=\"text-align: justify;\">Cada una de las tareas se puede editar y eliminar. A la vez, las tareas van orden&aacute;ndose de la primera realizada hasta la &uacute;ltima.</p>",
+    "cover": "https://i.imgur.com/P6E3Xvn.jpg",
+    "images": [
+      {
+        "source": "https://i.imgur.com/J9Qadie.gif"
+      },
+      {
+        "source": "https://i.imgur.com/3a03Vp4.gif"
+      },
+      {
+        "source": "https://i.imgur.com/D2RDLDG.gif"
+      }
+    ],
+    "category": "React, Nodejs, MongoDB",
+    "github": "https://github.com/alefigure8/dashboard-react/",
+    "demo": "https://wizardly-agnesi-b70b8d.netlify.app"
+  },
+  {
+    "id": 5,
+    "title": "Tank Force (Juego)",
+    "description": "<p style=\"text-align: justify;\">Reversión del clásico <strong>Battle City</strong>, realizado con <strong>C++</strong> y <strong>SFML</strong>. El juego fue repensado para tener una cuantas características nuevas, como la posibilidad de girar la torreta, incapacitar al enemigo, arrastrar vehículos y tanques destruidos y daño por explosión. El juego cuenta con 3 niveles de dificultad, los cuales se diferencian por la velocidad de los enemigos, la cantidad de enemigos y la cantidad de vidas. El juego cuenta con un sistema de guardado de puntajes, el cual se almacena en un archivo TXT.</p>",
+    "cover": "https://i.imgur.com/JlbzPPT.jpg",
+    "images": [
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/tank_force_1.jpg"
+      },
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/tank_force_2.jpg"
+      },
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/tank_force_3.jpg"
+      }
+    ],
+    "category": "C++, SFML",
+    "github": "https://github.com/alefigure8/Juego---TP-Final/",
+    "demo": ""
+  },
+  {
+    "id": 6,
+    "title": "Gestion Ventas",
+    "description": "<h3 style=\"text-align: justify;\"><strong>¿De qué se trata?</strong></h3> <p style=\"text-align: justify;\">Programa de <strong>Gestión de Ventas</strong> realizado para la firma <strong>Velinda Textiles</strong> (Fábrica y locales de ventas de ropa del barrio de Flores)</p> <p>&nbsp;</p> <p style=\"text-align: justify;\">El programa cuenta principalmente con la capacidad de poder realizar cobros de ventas, consultando los productos previamente cargados con sus precios para poder realizar la operación. Podemos tener un control de stock a través de informes diarios, semanales o por un periodo que determinemos. Se pueden confeccionar presupuestos e imprimir. Agendar clientes para luego poder generar reportes.</p> <p>&nbsp;</p> <p style=\"text-align: justify;\">Otro dato a destacar es que es capaz de generar análisis de ventas por producto, por cliente y por día, remarcando la cantidad vendida en promedio, en efectivo, tarjeta, como los porcentajes de categorías más vendidos.</p> <p><br><br></p> <h3 style=\"text-align: justify;\"><strong>Herramientas</strong></h3> <p style=\"text-align: justify;\">Realizado con <strong>.NET Framework</strong> utilizando <strong>Winforms </strong>y <strong>C#</strong>. Los datos son guardados en <strong>CSV</strong> para poder ser utilizado sin una conexión a internet.</p> <p><br><br></p>",
+    "cover": "https://i.imgur.com/FAMHFLC.jpg",
+    "images": [
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/gestion_1.jpg"
+      },
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/gestion_2.jpg"
+      },
+      {
+        "source": "https://alefigure8.github.io/portfolio/img/gestion_3.jpg"
+      }
+    ],
+    "category": ".NET, ADO.NET, C#",
+    "github": "https://github.com/alefigure8/Gestion-de-Ventas-Archivo-",
+    "demo": ""
+  },
+  {
+    "id": 7,
+    "title": "Gestión de Restaurante",
+    "description": "<div class=\"flex flex-grow flex-col gap-3\">\n <div class=\"min-h-[20px] flex items-start overflow-x-auto whitespace-pre-wrap break-words flex-col gap-4\">\n <div class=\"markdown prose w-full break-words dark:prose-invert light\">\n <h3><strong>¿De qué trata?</strong></h3>\n <p>Trabajo realizado en grupo de 3 integrantes (con integración en GitHub) para la materia <strong>Programación III</strong> de la <strong>Universidad Tecnológica Nacional (UTN - FRGP)</strong> dictada por el docente Maximiliano Sar Fernandez.</p>\n <br>\n <p>Consiste en una aplicación web para administrar pedidos y mesas de un Restaurante. La aplicación permite abrir y cerrar los pedidos para cada mesa. También contiene la información de los insumos (platos, bebidas) que se asignan a los pedidos de las mesas, con esta información precargada para su utilización. Cada ítem tiene precio y cantidades.</p>\n <br>\n <p>La aplicación implementa un sistema de seguridad con ingreso mediante usuario y contraseña. Además, se han definido distintos perfiles de acceso. El perfil \"Gerente\" tiene acceso a todas las funcionalidades del sistema, mientras que el perfil \"Mesero\" solo puede ver las mesas que tiene asignadas y abrir y cerrar pedidos relacionados a ellas.</p>\n <br>\n <p>Al final del día, se pueden generar diversos reportes, como pedidos por mesa, pedidos por mesero/a, entre otros, para obtener información relevante sobre la gestión diaria del Resto. La implementación de este proyecto ha mejorado significativamente la eficiencia y organización del establecimiento.</p>\n <br><br>\n <h3><strong>Herramientas</strong></h3>\n </div>\n </div>\n </div>\n <p>El proyecto fue realizado con <strong>.NET Framework</strong> utilizando <strong>WebForms</strong>,<strong> ADO.NET</strong> y <strong>SQL Server</strong>. Para las vistas se utilizó <strong>HTML</strong>, <strong>CSS </strong>(Boostrap) y <strong>JavaScript</strong>.</p>\n <p>&nbsp;</p>",
+    "cover": "https://i.imgur.com/hpgLUhc.jpg",
+    "images": [
+      {
+        "source": "https://i.imgur.com/gi8ApJo.png"
+      },
+      {
+        "source": "https://i.imgur.com/Xgk4q6n.png"
+      },
+      {
+        "source": "https://i.imgur.com/Yn3wHCc.png"
+      },
+      {
+        "source": "https://i.imgur.com/0tdxbGm.png"
+      }
+    ],
+    "category": ".NET, ADO.NET, SQL Server",
+    "github": "https://github.com/alefigure8/TPCuatrimestral_equipo-25/",
+    "demo": ""
+  },
+  {
+    "id": 8,
+    "title": "Aplicación Banco",
+    "description": "<h3><strong>¿De qué se trata?</strong></h3>\n <p>Aplicación web realizada en grupo de 5 integrantes para la materia <strong>Laboratorio IV</strong> de la <strong>Universidad Tecnológica Nacional </strong>(UTN - FRGP) para la docente Tamara Herrera.</p>\n <p>&nbsp;</p>\n <p>Sistema de gestión para un banco en donde existirán dos tipos de usuarios: administrador del banco y clientes. El mismo contará con Cuentas, Transferencias a terceros o a cuentas propias, Prestamos y la posibilidad de realizar pagos de las cuotas del prestamos. El Administrador puede dar de alta Clientes y sus cuentas, como también aceptar o rechazar los prestamos que se soliciten.</p>\n <p>&nbsp;</p>\n <p>La aplicación además cuenta con sistema de autentificación mediante mail y contraseña, asegurando en cada página que sea un usuario el que las recorra, como también que el usuario no pueda modificar su información para acceder a páginas de otros usuario o realizar pagos desde otra cuenta que no sean las suyas.</p>\n <p><br><br></p>\n <h3><strong>Herramientas</strong></h3>\n <p>Aplicación web realizada en JAVA, con JSP, Servlet, Session y JDBC. Servidor TomCat.</p>",
+    "cover": "https://i.imgur.com/CtRs2Dd.jpg",
+    "images": [
+      {
+        "source": "https://i.imgur.com/yvcJ1SI.jpg"
+      },
+      {
+        "source": "https://i.imgur.com/4LhnEGf.jpg"
+      },
+      {
+        "source": "https://i.imgur.com/90iVhWB.jpg"
+      },
+      {
+        "source": "https://i.imgur.com/4j3G0iT.jpg"
+      }
+    ],
+    "category": "JAVA, JSP, SERVLET, JDBC",
+    "github": "https://github.com/alefigure8/JAVA_LaboratorioIV/tree/main/TPINT_GRUPO_5_LAB4/",
+    "demo": ""
+  }
+]
