@@ -13,7 +13,7 @@ export const getProyect = async () => {
   const ACCESS_KEY = import.meta.env.VITE_ACCESS_KEY;
 
   try {
-    const { data } = await axios(URL_LOCAL, {
+    const { data } = await axios(URL, {
       "Content-Type": "application/json",
     });
     if (data?.length > 0) {
@@ -37,7 +37,7 @@ export const getProyect = async () => {
       }
     } catch (error) {
       try {
-        const { data } = await axios(URL, {
+        const { data } = await axios(URL_LOCAL, {
           "Content-Type": "application/json",
         });
         if (data?.length > 0) {
